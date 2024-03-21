@@ -1,3 +1,16 @@
 :root {
-  
+    --background-gray: #f3f3f3;
+    --light-gray: #d9d9d9;
+    --normal-green: #627952;
+    --white: #fff;
+    --light-green: #9db580;
+    --light-beige: #eee1cc;
+    --black-green: #3f4636;
+    --brown: #705f44;
+    --black: #000;
+    --dark-green: #465939;
+
+    --font-heading: 32px;
+    --font-subheading: 20px;
+    --font-heading: 32px;
 }
