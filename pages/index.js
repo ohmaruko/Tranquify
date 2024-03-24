@@ -23,7 +23,10 @@ export default function Home() {
           <GreenButton text="Log in" />
           <BeigeButton text="Sign up" /> 
         </div>
-        <LinkButton link="/logIn" linkText="Continue as guest"/>
+        <div className={styles.linkContainer}>
+          <LinkButton link="/logIn" linkText="Continue as guest"/>
+        </div>
+        
       </main>
     </>
   );

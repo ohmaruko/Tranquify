@@ -3,8 +3,8 @@ import Image from "next/image";
 import styles from "@/styles/LogIn.module.css";
 import TopBar from "@/components/TopBar";
 import GreenButton from "@/components/GreenButton";
-import BeigeButton from "@/components/BeigeButton";
 import LinkButton from "@/components/LinkButton";
+import InputField from "@/components/InputField";
 
 
 export default function LogIn() {
@@ -19,7 +19,54 @@ export default function LogIn() {
             <TopBar/>
             <main className={`${styles.main}`}>
                 <div className={styles.content}>
+                    <h1 className={styles.logInText}>Log in with Email</h1>
+                    <form>
+                        <InputField placeholder="Email"/>
+                        <InputField placeholder="Password"/>
+                    </form>
+                    <div className={styles.loginButton}>
+                        <GreenButton text="Log in" />
+                    </div>
                     
+                    <div className={styles.division}>
+                        <div className={styles.lineContainer}>
+                            <hr className={styles.line}/>
+                        </div>
+                        <p>Or Log in with</p>
+                        <div className={styles.lineContainer}>
+                            <hr className={styles.line}/>
+                        </div>
+                    </div>
+                    <div className={styles.otherLogin}>
+                        <div className={styles.facebook}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                            </svg>
+                        </div>
+                        <div className={styles.apple}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-apple" viewBox="0 0 16 16">
+                                <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
+                                <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
+                            </svg>
+                        </div>
+                        <div className={styles.google}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <g clip-path="url(#clip0_351_955)">
+                            <path d="M31.618 16.3682C31.618 15.2806 31.5298 14.1871 31.3417 13.1171H16.25V19.2784H24.8923C24.5337 21.2655 23.3814 23.0234 21.6941 24.1404V28.1382H26.85C29.8778 25.3515 31.618 21.2361 31.618 16.3682Z" fill="#4285F4"/>
+                            <path d="M16.25 32.0012C20.5653 32.0012 24.2045 30.5843 26.8559 28.1386L21.7 24.1408C20.2655 25.1167 18.4135 25.6694 16.2559 25.6694C12.0817 25.6694 8.54251 22.8533 7.27262 19.0671H1.95203V23.1884C4.66818 28.5913 10.2004 32.0012 16.25 32.0012Z" fill="#34A853"/>
+                            <path d="M7.26672 19.0672C6.5965 17.0801 6.5965 14.9283 7.26672 12.9412V8.81995H1.952C-0.317334 13.341 -0.317334 18.6675 1.952 23.1885L7.26672 19.0672Z" fill="#FBBC04"/>
+                            <path d="M16.25 6.33288C18.5311 6.29761 20.7358 7.15596 22.3878 8.73156L26.9559 4.16349C24.0634 1.44734 20.2243 -0.0459547 16.25 0.00107822C10.2004 0.00107822 4.66818 3.41096 1.95203 8.81974L7.26674 12.941C8.53075 9.14897 12.0759 6.33288 16.25 6.33288Z" fill="#EA4335"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_351_955">
+                            <rect width="32" height="32" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <p className={styles.noAccount}>Don't have an account?</p>
+                    <LinkButton link="/signUp" linkText="Sign up"/>
                 </div>
             </main>
         </>

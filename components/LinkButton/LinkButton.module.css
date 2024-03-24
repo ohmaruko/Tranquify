@@ -11,7 +11,3 @@
 .link:active {
     color: var(--black);
 }
-
-.linkContainer {
-    margin-top: 45px;
-}
