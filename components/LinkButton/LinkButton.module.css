@@ -1,0 +1,17 @@
+.link {
+    color: var(--brown);
+    font-size: var(--font-body);
+    font-weight: bold;
+}
+
+.link:hover {
+    color: var(--dark-green);
+}
+
+.link:active {
+    color: var(--black);
+}
+
+.linkContainer {
+    margin-top: 45px;
+}

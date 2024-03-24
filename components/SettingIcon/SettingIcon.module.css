@@ -1,0 +1,15 @@
+.settingIconContainer {
+    margin: 64px 36px 0 0;
+}
+
+.settingIcon {
+    color: var(--light-green);
+}
+
+.settingIcon:hover {
+    color: var(--normal-green);
+}
+
+.settingIcon:active {
+    color: var(--dark-green);
+}

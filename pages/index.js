@@ -1,7 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
-
+import TopBar from "@/components/TopBar";
+import GreenButton from "@/components/GreenButton";
+import BeigeButton from "@/components/BeigeButton";
+import LinkButton from "@/components/LinkButton";
 
 export default function Home() {
   return (
@@ -12,8 +15,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} `}>
-       <h1>hello</h1>
+      <TopBar/>
+      <main className={`${styles.main}`}>
+        <span className={styles.logo}></span>
+        <h1 className={styles.tranquify}>Tranquify</h1>
+        <div className={styles.buttonContainer}>
+          <GreenButton text="Log in" />
+          <BeigeButton text="Sign up" /> 
+        </div>
+        <LinkButton link="/logIn" linkText="Continue as guest"/>
       </main>
     </>
   );
