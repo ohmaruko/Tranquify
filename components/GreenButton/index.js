@@ -1,9 +1,14 @@
 import styles from "./GreenButton.module.css";
+import Link from 'next/link';
 
-export default function GreenButton({text}) {
+export default function GreenButton({greenButtonText, greenButtonLink}) {
     return (
         <div>
-            <button className={styles.button}>{text}</button>
+            <Link href={greenButtonLink} className={styles.buttonText}>
+                <button className={styles.button}>
+                    {greenButtonText}
+                </button>
+            </Link>
         </div>
     )
 }

@@ -20,11 +20,11 @@ export default function Home() {
         <span className={styles.logo}></span>
         <h1 className={styles.tranquify}>Tranquify</h1>
         <div className={styles.buttonContainer}>
-          <GreenButton text="Log in" />
-          <BeigeButton text="Sign up" /> 
+          <GreenButton greenButtonText="Log in" greenButtonLink="/logIn" />
+          <BeigeButton beigeButtonText="Sign up" beigeButtonLink="signUp" /> 
         </div>
         <div className={styles.linkContainer}>
-          <LinkButton link="/logIn" linkText="Continue as guest"/>
+          <LinkButton link="/logIn" linkText="Continue as guest" />
         </div>
         
       </main>
