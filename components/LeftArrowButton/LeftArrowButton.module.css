@@ -1,0 +1,23 @@
+.leftArrowButton {
+    width: 72px;
+    height: 72px;
+    background-color: var(--light-beige);
+    color: var(--black);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftArrowButton:hover {
+    background-color: var(--brown);
+    color: var(--white);
+}
+
+.leftArrowButton:active {
+    background-color: var(--dark-brown);
+    color: var(--white);
+}
+
+
+

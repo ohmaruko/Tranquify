@@ -25,7 +25,7 @@ export default function SignUp() {
                         <InputField placeholder="Password"/>
                     </form>
                     <div className={styles.signUpButton}>
-                        <GreenButton greenButtonText="Sign up" greenButtonLink="/home"/>
+                        <GreenButton greenButtonText="Sign up" greenButtonLink="/onboarding01"/>
                     </div>
                     <p className={styles.haveAccount}>Already have an account?</p>
                     <LinkButton linkText="Log in" link="/logIn" />
