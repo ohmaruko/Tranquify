@@ -1,0 +1,20 @@
+.container {
+    /* This could goes to global css*/
+    max-width: 430px;
+    max-height: 932px;
+    margin: 20vh auto;
+}
+.message {
+    font-size: var(--font-subheading);
+    width: 273px;
+    margin: 0 auto;
+}
+.meditationCards {
+    display: flex;
+    flex-direction: row;
+}
+.categoryCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+}
