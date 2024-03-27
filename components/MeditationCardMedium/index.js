@@ -1,9 +1,9 @@
-import styles from './FavouriteCardMedium.module.css';
+import styles from './MeditationCardMedium.module.css'
 import { useState } from 'react';
 import Link from 'next/link';
 // import { favourite } from;
 
-export default function FavouriteCardMedium({
+export default function MeditationCardMedium({
     title,
     time,
     source,

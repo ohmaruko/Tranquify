@@ -1,7 +1,7 @@
 import styles from "./SarchBar.module.css";
 import { meditationData } from "@/data/meditation";
 import { useState } from "react";
-import FavouriteCardMedium from "../FavouritesCardMedium";
+import FavouriteCardMedium from "../MeditationCardMedium";
 
 export default function SearchBar() {
   const [text, setText] = useState(null);

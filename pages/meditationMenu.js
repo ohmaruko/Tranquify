@@ -1,6 +1,6 @@
 import styles from '../styles/MeditationMenu.module.css';
 import CategoryCard from '@/components/CategoryCard';
-import FavouriteCardMedium from '@/components/FavouritesCardMedium';
+import MeditationCardMedium from '@/components/MeditationCardMedium';
 import LinkButton from '@/components/LinkButton';
 import SearchBar from '@/components/SearchBar';
 
@@ -16,9 +16,9 @@ export default function meditationMenu() {
                     <LinkButton link="#" linkText="View More" />
                 </div>
                 <div className={styles.meditationCards}>
-                    <FavouriteCardMedium title="Anxiety Away" time="10 min" source="#" thumbnail="/images/placeholder.png" />
-                    <FavouriteCardMedium title="Anxiety Away" time="10 min" source="#" thumbnail="/images/placeholder.png" />
-                    <FavouriteCardMedium title="Anxiety Away" time="10 min" source="#" thumbnail="/images/placeholder.png" />
+                    <MeditationCardMedium title="Anxiety Away" time="10 min" source="#" thumbnail="/images/placeholder.png" />
+                    <MeditationCardMedium title="Anxiety Away" time="10 min" source="#" thumbnail="/images/placeholder.png" />
+                    <MeditationCardMedium title="Anxiety Away" time="10 min" source="#" thumbnail="/images/placeholder.png" />
                 </div>
                 <div className={styles.categoryCards}>
                     <CategoryCard category="Favourite" backgraound="/images/placeholder.png" link="/meditationFavourite"/>
