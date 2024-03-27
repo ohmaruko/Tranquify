@@ -6,6 +6,8 @@
     min-height: 20vh;
     width: 100%;
     overflow-x: hidden;
+
+    background-color: var(--white);
 }
 
 .loading {
@@ -55,6 +57,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    /* iPhone 14 Pro Max dimensions */
+    width: 430px;
+    height: 932px;
+    margin: auto;
+    background-color: var(--background-gray);
 }
 
 .greetingsContainer {
