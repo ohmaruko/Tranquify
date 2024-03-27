@@ -2,16 +2,27 @@
     /* This could goes to global css*/
     max-width: 430px;
     max-height: 932px;
-    margin: 20vh auto;
+    margin: 0 auto;
 }
 .message {
     font-size: var(--font-subheading);
     width: 273px;
     margin: 0 auto;
 }
+.subheading {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.subheading h1{
+    font-size: var(--font-subheading);
+}
 .meditationCards {
     display: flex;
     flex-direction: row;
+    gap: 15px;
+    margin-bottom: 41px;
 }
 .categoryCards {
     display: flex;
