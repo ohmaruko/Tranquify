@@ -8,11 +8,13 @@
     font-size: var(--font-subheading);
     width: 273px;
     margin: 0 auto;
+    text-align: center;
 }
 .subheading {
     width: 80%;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
     align-items: center;
 }
 .subheading h1{
@@ -21,11 +23,13 @@
 .meditationCards {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 15px;
     margin-bottom: 41px;
 }
 .categoryCards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 17px;
 }

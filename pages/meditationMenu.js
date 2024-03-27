@@ -2,13 +2,14 @@ import styles from '../styles/MeditationMenu.module.css';
 import CategoryCard from '@/components/CategoryCard';
 import FavouriteCardMedium from '@/components/FavouritesCardMedium';
 import LinkButton from '@/components/LinkButton';
+import SearchBar from '@/components/SearchBar';
 
 export default function meditationMenu() {
     return(
         <>
             <div className={styles.container}>
                 <p>top bar component</p>
-                <p>search bar component</p>
+                <SearchBar />
                 <h1 className={styles.message}>How would you like to improve your day?</h1>
                 <div className={styles.subheading}>
                     <h1>Suggestions</h1>
@@ -25,6 +26,7 @@ export default function meditationMenu() {
                     <CategoryCard category="Time" backgraound="/images/placeholder.png" link="/meditationFavourite"/>
                     <CategoryCard category="Music" backgraound="/images/placeholder.png" link="/meditationFavourite"/>
                 </div>
+                <p>nav bar component</p>
             </div>
         </>
     )
