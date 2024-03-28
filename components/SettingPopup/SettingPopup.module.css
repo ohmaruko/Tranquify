@@ -28,11 +28,12 @@
 
 .closeButton {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 140px;
+    right: 60px;
     padding: 10px;
     border: none;
-    background-color: var(--background-gray);
+    outline: none;
+    background: transparent;
 }
 
 .rectangleSvg {
