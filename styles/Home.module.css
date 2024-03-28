@@ -17,6 +17,7 @@
 
 .tranquify {
   margin-bottom: 70px;
+  font-style: var(--logo);
 }
 
 .buttonContainer {
