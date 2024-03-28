@@ -13,8 +13,6 @@
 }
 .searchResult {
     position:absolute;
-    width: 430px;
-    height: 932px;
     margin: auto;
     display: flex;
     flex-direction: column;

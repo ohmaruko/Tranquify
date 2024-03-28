@@ -7,7 +7,8 @@ export const meditationData = {
             category: "stress",
             isSaved: true,
             isOnlyMusic: false,
-            source: "https://youtu.be/EfubAj5f_rM?si=m_RyVXq3-N86vyd0"
+            source: "https://www.youtube.com/embed/EfubAj5f_rM?si=gzCDTbEaZOocxzVQ",
+            thumbnail: "/images/placeholder.png"
         },
         {
             title: "Get Peace",
@@ -16,7 +17,8 @@ export const meditationData = {
             category: "anger",
             isSaved: false,
             isOnlyMusic: false,
-            source: "https://youtu.be/cZJAsW_5SRA?si=kY2zWkQ0jw0-1IPE"
+            source: "https://www.youtube.com/embed/cZJAsW_5SRA?si=0NPeXUHvPMQ8ECeT",
+            thumbnail: "/images/placeholder.png"
         },
         {
             title: "Forest",
@@ -25,7 +27,8 @@ export const meditationData = {
             category: "",
             isSaved: false,
             isOnlyMusic: true,
-            source: "https://youtu.be/4S3yJkGWM4E?si=3W40JNraFmiirHLP"
+            source: "https://www.youtube.com/embed/4S3yJkGWM4E?si=X2wBMxllfLH68NTy",
+            thumbnail: "/images/placeholder.png"
         }
     ]
 }

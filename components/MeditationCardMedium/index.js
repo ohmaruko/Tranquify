@@ -1,7 +1,6 @@
 import styles from './MeditationCardMedium.module.css'
 import { useState } from 'react';
 import Link from 'next/link';
-// import { favourite } from;
 
 export default function MeditationCardMedium({
     title,
@@ -16,8 +15,9 @@ export default function MeditationCardMedium({
     }
     return(
         <div className={styles.cardContainer}>
-            <Link href={source} style={{textDecoration: 'none'}}>
-                <div 
+            {/* <Link href={source} style={{textDecoration: 'none'}}> */}
+            <div>
+                <div
                 style={{backgroundImage: `url(${thumbnail})`, width: '100%', height: '100%'}} 
                 className={styles.thumbnail}
                 >
@@ -31,7 +31,8 @@ export default function MeditationCardMedium({
                          />
                     </svg>
                 </div>
-            </Link>
+            {/* </Link> */}
+            </div>
             <div className={styles.text}>
                 <p>{title}</p>
                 <p>{time}</p>
