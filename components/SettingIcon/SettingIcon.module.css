@@ -1,9 +1,11 @@
 .settingIconContainer {
     margin: 64px 36px 0 0;
+    z-index: 1000;
 }
 
 .settingIcon {
     color: var(--light-green);
+    z-index: 1000;
 }
 
 .settingIcon:hover {

@@ -1,0 +1,43 @@
+.popupWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+}
+
+.popup {
+  background-color: white;
+  width: 322px;
+  height: 672px;
+  border-radius: 30px;
+  z-index: 1; /* Ensure popup appears above backdrop */
+}
+
+.closeButton {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    padding: 10px;
+    border: none;
+    background-color: var(--background-gray);
+}
+
+.rectangleSvg {
+  width: 100%;
+  height: 100%;
+}
+
+  
