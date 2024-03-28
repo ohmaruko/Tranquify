@@ -1,7 +1,6 @@
 
 
 :root {
-    /* Global Colours */
     --background-gray: #f3f3f3;
     --light-gray: #d9d9d9;
     --normal-green: #627952;
@@ -14,20 +13,13 @@
     --black: #000;
     --dark-green: #465939;
 
-    /* Logo / Quicksand Font*/
-    --quicksand: 'Quicksand', sans-serif;
-    --logo: 36px var(--quicksand) var(--dark-green);
-
-    /* DM Sans Fonts */
-    --dm-sans: 'DM Sans', sans-serif; 
-
-    --font-heading: 32px var(--dm-sans); 
-    --font-subheading: 20px var(--dm-sans);
-    --font-button: 20px var(--dm-sans);
-    --font-body: 16px var(--dm-sans);
-    --font-small-body: 12px var(--dm-sans);
+    --font-heading: 32px;
+    --font-subheading: 20px;
+    --font-button: 20px;
+    --font-heading: 32px;
+    --font-body: 16px;
+    --font-small-body: 12px;
 }
-
 
 body {
     /* margin: 0; */
