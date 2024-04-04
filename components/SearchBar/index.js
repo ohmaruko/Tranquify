@@ -1,4 +1,4 @@
-import styles from "./SarchBar.module.css";
+import styles from "./SearchBar.module.css";
 import { meditationData } from "@/data/meditation";
 import { useState } from "react";
 import FavouriteCardMedium from "../MeditationCardMedium";

@@ -1,0 +1,32 @@
+/* .settingButton {
+    width: 268px;
+    height: 71px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: var(--light-gray);
+} */
+
+.button {
+    /* position: relative; */
+    width: 268px;
+    height: 71px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: var(--light-gray);
+    border: none;
+    margin: 8px;
+    font-family: var(--font-button);
+}
+
+.dropdownContent {
+    display: none; /* Initially hide the dropdown content */
+    background-color: var(--white);
+    border-radius: 20px;
+    border: 2px solid var(--light-green);
+    z-index: 1;
+    text-align: left;
+}
+
+.dropdownContent.active {
+    display: block; /* Show the dropdown content when active */
+}
