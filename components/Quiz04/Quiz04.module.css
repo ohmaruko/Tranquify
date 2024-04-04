@@ -1,12 +1,12 @@
-.moodsContainer {
+.meditationContainer {
     display: flex;
     flex-direction: column;
 }
-.moods {
+.meditation {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 19px;
+    gap: 56px;
 }
 .singleLabel {
     width: 55px;

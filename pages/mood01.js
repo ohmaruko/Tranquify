@@ -9,8 +9,12 @@ import { useState } from 'react';
 
 export default function Mood01() {
     const [scoreOne, setScoreOne] = useState(0);
-    const totalScore = scoreOne;
+    const [scoreTwo, setScoreTwo] = useState(0);
+    const [scoreThree, setScoreThree] = useState(0);
+    const [scoreFour, setScoreFour] = useState(0);
+    const totalScore = scoreOne + scoreTwo + scoreThree + scoreFour;
     // ??? have to click on button twice to store score
+    // ??? need to fix score 4
     console.log(scoreOne);
     return(
         <>
@@ -33,10 +37,18 @@ export default function Mood01() {
                         </div>
                         <div className={styles.singleQuiz}>
                             <h2>Have you meditated today?</h2>
-                            <Quiz04 />
+                            <Quiz04 quiz04Score={(score) => setScoreFour(score)}/>
                         </div>
                     </div>
-                    <GreenButton greenButtonText='Save' greenButtonLink='#'/>
+                    <GreenButton 
+                        greenButtonText='Save' 
+                        // greenButtonLink='#'
+                        greenButtonLink={
+                            totalScore <= 7? "#"
+                                : totalScore > 7 && totalScore <= 14? "#"
+                                : "#"
+                        }
+                    />
                 </div>
                 <div>nav bar component</div>
             </div>

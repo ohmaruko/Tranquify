@@ -40,7 +40,7 @@ export default function Quiz01({
                 {
                     labels.map((label) => {
                         return(
-                            <div className={styles.simgleLabel}>
+                            <div className={styles.singleLabel}>
                                 <p>{label}</p>
                             </div>
                         )
