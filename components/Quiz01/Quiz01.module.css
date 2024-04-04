@@ -1,0 +1,16 @@
+.moodsContainer {
+    display: flex;
+    flex-direction: column;
+}
+.moods {
+    display: flex;
+    flex-direction: row;
+    gap: 19px;
+}
+.simgleLabel {
+    width: 55px;
+}
+.simgleLabel p {
+    text-align: center;
+    font-size: var(--font-body);
+}
