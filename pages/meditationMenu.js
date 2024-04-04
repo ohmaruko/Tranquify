@@ -6,7 +6,7 @@ import MeditationCardMedium from '@/components/MeditationCardMedium';
 import { meditationData } from '@/data/meditation';
 import { useState } from 'react';
 
-export default function meditationMenu() {
+export default function MeditationMenu() {
     const [isDisplayed, setIsDisplayed] = useState(false);
     const [media, setMedia] = useState();
     const [mediaTitle, setMediaTitle] = useState();
