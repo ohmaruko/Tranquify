@@ -8,3 +8,7 @@
     font-size: var(--font-body);
     color: var(--black);
 }
+
+.invalid {
+    border: 2px solid red;
+}

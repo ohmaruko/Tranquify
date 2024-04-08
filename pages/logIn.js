@@ -4,9 +4,20 @@ import TopBar from "@/components/TopBar";
 import GreenButton from "@/components/GreenButton";
 import LinkButton from "@/components/LinkButton";
 import InputField from "@/components/InputField";
+import {useState} from 'react';
 
 
 export default function LogIn() {
+    const [email, setEmail] = useState('');
+    const [emailValid, setEmailValid] = useState(true); // Initially set to true
+
+    const handleEmailChange = (event) => {
+        const { value } = event.target;
+        setEmail(value);
+        // Validate email format using a regular expression
+        setEmailValid(/^\S+@\S+\.\S+$/.test(value));
+    };
+
     return (
         <>
             <Head>
@@ -20,8 +31,14 @@ export default function LogIn() {
                 <div className={styles.content}>
                     <h1 className={styles.logInText}>Log in with Email</h1>
                     <form>
-                        <InputField placeholder="Email"/>
-                        <InputField placeholder="Password"/>
+                        <InputField 
+                             inputType="email"
+                             placeholder="Email"
+                             value={email}
+                             onChange={handleEmailChange}
+                             invalid={!emailValid}
+                        />
+                        <InputField inputType="password" placeholder="Password"/>
                     </form>
                     <div className={styles.logInButton}>
                         <GreenButton greenButtonText="Log in" greenButtonLink="/onboarding01"/>
