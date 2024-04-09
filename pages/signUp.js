@@ -33,9 +33,7 @@ export default function SignUp() {
                     <form>
                         <InputField 
                             placeholder="Username"
-                            value={email}
-                            onChange={handleEmailChange}
-                            invalid={!emailValid}
+                            inputType="text"
                         />
                         <InputField 
                             placeholder="Email"
@@ -44,10 +42,8 @@ export default function SignUp() {
                             invalid={!emailValid}
                         />
                         <InputField 
+                            inputType="password" 
                             placeholder="Password"
-                            value={email}
-                            onChange={handleEmailChange}
-                            invalid={!emailValid}
                         />
                     </form>
                     <div className={styles.signUpButton}>
