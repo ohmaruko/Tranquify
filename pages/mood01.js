@@ -38,15 +38,12 @@ export default function Mood01() {
                             <Quiz04 quiz04Score={(score) => setScoreFour(score)}/>
                         </div>
                     </div>
-                    {/* Delete it later */}
-                    <div><p>Score: {totalScore}</p></div>
                     <GreenButton 
                         greenButtonText='Save' 
-                        // replace # with the suggestions message page links
                         greenButtonLink={
-                            totalScore >= 4 && totalScore <= 10 ? "#"
-                                : totalScore >= 11 && totalScore <= 15? "#"
-                                : "#"
+                            totalScore >= 4 && totalScore <= 10 ? "./resultLow"
+                                : totalScore >= 11 && totalScore <= 15? "./resultMedium"
+                                : "./resultHigh"
                         }
                     />
                 </div>
