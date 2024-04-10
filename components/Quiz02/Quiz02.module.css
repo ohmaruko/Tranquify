@@ -1,6 +1,6 @@
 .slider {
     -webkit-appearance: none;
-    width: 100%;
+    width: 250px;
     height: 8px;
     background: var(--light-gray);
     outline: none;

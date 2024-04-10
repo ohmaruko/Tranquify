@@ -24,9 +24,9 @@ export default function Quiz02({
                 }}
             />
             <div className={styles.sleepLevelLabels}>
-                <p>Not Stressed</p>
+                <p>Great</p>
                 <p>Average</p>
-                <p>Stressed</p>
+                <p>Poor</p>
             </div>
         </div>
     )
