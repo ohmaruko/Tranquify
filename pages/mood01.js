@@ -12,10 +12,8 @@ export default function Mood01() {
     const [scoreTwo, setScoreTwo] = useState(0);
     const [scoreThree, setScoreThree] = useState(0);
     const [scoreFour, setScoreFour] = useState(0);
-    const totalScore = scoreOne + scoreTwo + scoreThree + scoreFour;
-    // ??? have to click on button twice to store score
-    // ??? need to fix score 4
-    console.log(scoreOne);
+    const totalScore = Number(scoreOne) + Number(scoreTwo) + Number(scoreThree) + Number(scoreFour);
+
     return(
         <>
             <div className={styles.container}>
@@ -29,23 +27,25 @@ export default function Mood01() {
                         </div>
                         <div className={styles.singleQuiz}>
                             <h2>How stressed did you feel?</h2>
-                            <Quiz02 />
+                            <Quiz02 quiz02Score={(score) => setScoreTwo(score)}/>
                         </div>
                         <div className={styles.singleQuiz}>
                             <h2>How was your sleep last night?</h2>
-                            <Quiz03 />
+                            <Quiz03 quiz03Score={(score) => setScoreThree(score)}/>
                         </div>
                         <div className={styles.singleQuiz}>
                             <h2>Have you meditated today?</h2>
                             <Quiz04 quiz04Score={(score) => setScoreFour(score)}/>
                         </div>
                     </div>
+                    {/* Delete it later */}
+                    <div><p>Score: {totalScore}</p></div>
                     <GreenButton 
                         greenButtonText='Save' 
-                        // greenButtonLink='#'
+                        // replace # with the suggestions message page links
                         greenButtonLink={
-                            totalScore <= 7? "#"
-                                : totalScore > 7 && totalScore <= 14? "#"
+                            totalScore >= 4 && totalScore <= 10 ? "#"
+                                : totalScore >= 11 && totalScore <= 15? "#"
                                 : "#"
                         }
                     />

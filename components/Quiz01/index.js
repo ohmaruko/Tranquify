@@ -26,9 +26,7 @@ export default function Quiz01({
                                 width={55} height={55} 
                                 onClick= {() => {
                                     setIndexSelected(index);
-                                    if(index === indexSelected) {
-                                        quiz01Score(scores[index]);
-                                    };
+                                    quiz01Score(scores[index]);
                                 }}
                             />
                         )
