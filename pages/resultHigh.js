@@ -3,8 +3,13 @@ import styles from "@/styles/Result.module.css";
 import TopBar from "@/components/TopBar";
 import GreenButton from "@/components/GreenButton";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function ResultLow() {
+    const moodMascots = ['/images/terrible-mascot.svg', '/images/bad-mascot.svg', '/images/ok-mascot.svg', '/images/good-mascot.svg', '/images/great-mascot.svg']
+    const moodMascotsAlt = ['Terrible mood mascot', 'Bad mood mascot', 'Okay mood mascot', 'Good mood mascot', 'Great mood mascot']
+    const router = useRouter();
+    const moodScore = Number(router.query.mood);
 
     return (
         <>
@@ -19,7 +24,7 @@ export default function ResultLow() {
                 <div className={styles.content}>
                     <div className={styles.resultCard}>
                         <div className={styles.mascot}>
-                            <Image src='/images/good-mascot.svg'alt='Good mood mascot' width={100} height={130} />
+                            <Image src={moodMascots[moodScore - 1]} alt={moodMascotsAlt[moodScore - 1]} width={100} height={130} />
                         </div>
                         <p className={styles.suggestionTitle}>Suggestions for You</p>
                         <div className={styles.suggestion}>

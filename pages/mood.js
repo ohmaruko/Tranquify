@@ -14,6 +14,14 @@ export default function Mood() {
     const [scoreFour, setScoreFour] = useState(0);
     const totalScore = Number(scoreOne) + Number(scoreTwo) + Number(scoreThree) + Number(scoreFour);
 
+    function saveButtonHandler() {
+        return (
+            totalScore >= 4 && totalScore <= 10 ? "./resultLow?mood=" + scoreOne
+                : totalScore >= 11 && totalScore <= 15? "./resultMedium?mood=" + scoreOne
+                : "./resultHigh?mood=" + scoreOne
+        )
+    }
+
     return(
         <>
             <div className={styles.container}>
@@ -40,11 +48,7 @@ export default function Mood() {
                     </div>
                     <GreenButton 
                         greenButtonText='Save' 
-                        greenButtonLink={
-                            totalScore >= 4 && totalScore <= 10 ? "./resultLow"
-                                : totalScore >= 11 && totalScore <= 15? "./resultMedium"
-                                : "./resultHigh"
-                        }
+                        greenButtonLink={saveButtonHandler()}
                     />
                 </div>
                 <div>nav bar component</div>
