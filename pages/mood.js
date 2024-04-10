@@ -1,4 +1,4 @@
-import styles from '../styles/mood01.module.css';
+import styles from '../styles/mood.module.css';
 import TopBar from '@/components/TopBar';
 import GreenButton from '@/components/GreenButton';
 import Quiz01 from '@/components/Quiz01';
@@ -7,7 +7,7 @@ import Quiz03 from '@/components/Quiz03';
 import Quiz04 from '@/components/Quiz04';
 import { useState } from 'react';
 
-export default function Mood01() {
+export default function Mood() {
     const [scoreOne, setScoreOne] = useState(0);
     const [scoreTwo, setScoreTwo] = useState(0);
     const [scoreThree, setScoreThree] = useState(0);
