@@ -10,11 +10,11 @@ export default function TopBar({
     return (
         <div className={styles.topBar}>
             <div>
-                <Link href={link} style={{display: backButton===true ? 'block':'none'}}>
+                <Link tabIndex='1' href={link} style={{display: backButton===true ? 'block':'none'}}>
                     <Image src='/images/back-button.svg' width={21} height={19}/>
                 </Link>
             </div>
-            <SettingIcon/>
+            <SettingIcon />
         </div>
     )
 }

@@ -19,6 +19,7 @@ export default function Quiz04({
                     meditationGrey.map((icons, index) => {
                         return(
                             <Image 
+                                tabIndex={index + 10}
                                 key={index}
                                 src={index === indexSelected? meditationGreen[index]:icons}
                                 alt={altText[index]} 

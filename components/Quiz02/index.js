@@ -7,9 +7,8 @@ export default function Quiz02({
 }) {
     const [stressLevel, setStressLevel] = useState(5);
     quiz02Score(stressLevel);
-
     return(
-        <div className={styles.container}>
+        <div className={styles.container} tabIndex='8'>
             <input
                 className={styles.slider}
                 aria-valuemin={1}
