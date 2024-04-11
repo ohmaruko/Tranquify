@@ -1,3 +1,6 @@
+.searchContainer {
+    margin: 0 auto;
+}
 .inputBox {
     width: 330px;
     height: 55px;
@@ -12,14 +15,31 @@
     border: 1px solid var(--light-green);
 }
 .searchResult {
+    width: 399px;
+    height: 566px;
+    background-color: var(--white);
     position:absolute;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    right: 15px;
+    top: 200px;
     border-radius: 30px;
+    border: solid 3px var(--dark-green);
+    z-index: 1;
 }
-.searchResultSingle {
-    background-color: var(--normal-green);
-    padding: 0 131px;
+.searchResult h2 {
+    font-size: var(--font-subheading);
+    margin: 1rem;
+}
+.heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0.5rem;
+}
+.meditaions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem 4rem;
+    gap: 0.5rem;
 }
