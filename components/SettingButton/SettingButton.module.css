@@ -1,13 +1,4 @@
-/* .settingButton {
-    width: 268px;
-    height: 71px;
-    flex-shrink: 0;
-    border-radius: 20px;
-    background: var(--light-gray);
-} */
-
 .button {
-    /* position: relative; */
     width: 268px;
     height: 71px;
     flex-shrink: 0;
@@ -19,14 +10,25 @@
 }
 
 .dropdownContent {
-    display: none; /* Initially hide the dropdown content */
+    display: none; /* Initially hides the dropdown content */
     background-color: var(--white);
     border-radius: 20px;
     border: 2px solid var(--light-green);
     z-index: 1;
     text-align: left;
+
+    position: absolute;
+    left: 18.5%;
+    z-index: 1; 
+    width: 268px;
+    margin-top: -2%;
+    font-family: var(--font-button);
 }
 
 .dropdownContent.active {
-    display: block; /* Show the dropdown content when active */
+    display: block; 
+}
+
+.dropdownContent p {
+    margin-left: 5%;
 }

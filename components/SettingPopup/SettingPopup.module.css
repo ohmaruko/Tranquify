@@ -49,3 +49,7 @@
   margin-top: 16px;
   font-family: var(--font-small-body);
 }
+
+.moreSettings {
+  color: var(--black);
+}

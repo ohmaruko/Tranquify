@@ -73,21 +73,8 @@ const SettingPopup = () => {
                                 </div>
                             </SettingButton>
 
-                            {/* <SettingButton title="Help & Support">
-                                <div className={styles.dropdownContent}>
-                                
-                                </div>
-                            </SettingButton>
-
-                            <SettingButton title="About">
-                                <div className={styles.dropdownContent}>
-                                
-                                </div>
-                            </SettingButton> */}
-
-                            <h5>Go to 
-                                <span><Link href="/setting"> More Settings...</Link></span>
-                            
+                            <h5>Go to&nbsp;
+                                <span><Link href="/setting" className={styles.moreSettings}>More Settings...</Link></span>
                             </h5>
                         </div>
 
