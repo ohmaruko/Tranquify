@@ -7,6 +7,7 @@ import TopBar from "@/components/TopBar";
 import SettingIcon from "@/components/SettingIcon";
 import LinkButton from "@/components/LinkButton";
 import FavouriteButton from "@/components/FavouriteButton";
+import Weather from "@/components/Weather";
 
 export default function HomePage() {
 
@@ -64,6 +65,7 @@ export default function HomePage() {
                         <p>{currentDate}</p>
                     </div>
                 </div>
+                <Weather/>
                 
             </div>
             <div className={styles.calendar}>

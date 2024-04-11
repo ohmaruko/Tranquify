@@ -30,6 +30,7 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 *.komodoproject
+.env
 
 # ignore log files and databases
 *.log
