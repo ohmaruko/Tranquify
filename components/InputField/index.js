@@ -1,16 +1,15 @@
 import styles from "./InputField.module.css";
 
-export default function InputField({placeholder}) {
+export default function InputField({placeholder, inputType, value, onChange, invalid}) {
 
     return (
         <div className={styles.inputContainer}>
                 <input 
-                    type="email" 
-                    id="email"
-                    className={styles.input} 
+                    inputType={inputType}
                     placeholder={placeholder}
-                    // value={firstName}
-                    // onChange={(e) => setFirstName(e.target.value)}
+                    value={value}
+                    onChange={onChange}
+                    className={`${styles.input} ${invalid ? styles.invalid : styles.input}`}
                 />
         </div>
     )

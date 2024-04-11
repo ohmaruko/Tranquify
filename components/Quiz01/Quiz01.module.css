@@ -1,0 +1,17 @@
+.moodsContainer {
+    display: flex;
+    flex-direction: column;
+}
+.moods {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 19px;
+}
+.singleLabel {
+    width: 55px;
+}
+.singleLabel p {
+    text-align: center;
+    font-size: var(--font-body);
+}

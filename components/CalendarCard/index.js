@@ -19,7 +19,7 @@ export default function CalendarCard({i}) {
 
     return (
         <div>
-            <Link href="/mood01" className={styles.calendarCard}>
+            <Link href="/mood" className={styles.calendarCard}>
                 <div className={styles.content}>
                     <div className={styles.calendarDate}>
                         <p className={styles.weekday}>{currentDate.weekday}</p>
