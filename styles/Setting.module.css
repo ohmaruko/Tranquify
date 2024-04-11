@@ -3,6 +3,10 @@
     justify-content: center;
     align-items: center;
     margin-top: 72px;
+
+    width: 430px;
+    height: 932px;
+    margin: auto; 
   }
   
   .closeButton {
@@ -10,8 +14,8 @@
   }
   
   .moreSettings {
-      font-size: var(--font-subheading);
-      margin: 0 121px;
+    font-size: var(--font-subheading);
+    margin: 0 121px;
   }
   
   .buttonContainer {
