@@ -1,4 +1,6 @@
 import styles from '../styles/MeditationMenu.module.css';
+import Image from 'next/image'
+import TopBar from '@/components/TopBar';
 import SearchBar from '@/components/SearchBar';
 import LinkButton from '@/components/LinkButton';
 import CategoryCard from '@/components/CategoryCard';
@@ -8,62 +10,69 @@ import { useState } from 'react';
 
 export default function MeditationMenu() {
     const [isDisplayed, setIsDisplayed] = useState(false);
-    const [media, setMedia] = useState();
-    const [mediaTitle, setMediaTitle] = useState();
+    const [media, setMedia] = useState({});
 
     return(
         <>
             <div className={styles.container}>
-                <p>top bar component</p>
+                <TopBar backButton={false} link="#" />
                 <SearchBar />
-                <h1 className={styles.message}>How would you like to improve your day?</h1>
-                <div className={styles.subheading}>
-                    <h1>Suggestions</h1>
+                <div className={styles.messageContainer}>
+                    <Image src='/images/bad-mascot.svg' alt='Bad mood mascot' width={58} height={76} className={styles.badMascot}/>
+                    <h1 className={styles.message}>How would you like to improve your day?</h1>
+                    <Image src='/images/good-mascot.svg' alt='Good mood mascot' width={58} height={76} />
+                </div>
+                <div className={styles.suggestions}>
+                    <h2>Suggestions</h2>
                     <LinkButton link="#" linkText="View More" />
                 </div>
                 <div className={styles.meditationCards}>
                     <div onClick={()=> {
                         setIsDisplayed(true); 
-                        setMedia(meditationData.meditations[0].source);
-                        setMediaTitle(meditationData.meditations[0].title)
+                        setMedia(meditationData.meditations[0]);
                         }}>
-                        <MeditationCardMedium title={meditationData.meditations[0].title} time={meditationData.meditations[0].duration + "min"} thumbnail={meditationData.meditations[0].thumbnail} />
+                        <MeditationCardMedium title={meditationData.meditations[0].title} time={meditationData.meditations[0].duration} thumbnail={meditationData.meditations[0].thumbnail} />
                     </div>
                     <div onClick={()=> {
                         setIsDisplayed(true); 
-                        setMedia(meditationData.meditations[1].source);
-                        setMediaTitle(meditationData.meditations[1].title)
+                        setMedia(meditationData.meditations[1]);
                         }}>
-                        <MeditationCardMedium title={meditationData.meditations[1].title} time={meditationData.meditations[1].duration + "min"} thumbnail={meditationData.meditations[1].thumbnail} />
+                        <MeditationCardMedium title={meditationData.meditations[1].title} time={meditationData.meditations[1].duration} thumbnail={meditationData.meditations[1].thumbnail} />
                     </div>
                     <div onClick={()=> {
                         setIsDisplayed(true); 
-                        setMedia(meditationData.meditations[2].source);
-                        setMediaTitle(meditationData.meditations[2].title)
+                        setMedia(meditationData.meditations[2]);
                         }}>
-                        <MeditationCardMedium title={meditationData.meditations[2].title} time={meditationData.meditations[2].duration + "min"} thumbnail={meditationData.meditations[2].thumbnail} />
+                        <MeditationCardMedium title={meditationData.meditations[2].title} time={meditationData.meditations[2].duration} thumbnail={meditationData.meditations[2].thumbnail} />
                     </div>
                 </div>
                 {/* Overlay screen */}
+                {/* Make a new page for this to make it reusable */}
                 <div className={styles.overlay}
                     style={{display: isDisplayed ? "block" : "none"}}>
                         <div className={styles.overlayInnerContainer}>
-                            <div className={styles.video}>
-                                {/* change here depends on source (now youtube)*/}
-                                <iframe width="420" height="345" src={media}
-                                frameborder="0" border="0" cellspacing="0">
-                                </iframe>
+                            <div onClick={()=>setIsDisplayed(false)} className={styles.closeButton}>
+                                <Image src='/images/closeButton.svg' alt='Close Button Icon' width={32} height={32} />
                             </div>
-                            <div><h1>{mediaTitle}</h1></div>
-                            <div onClick={()=>setIsDisplayed(false)} className={styles.closeButton}>close</div>
+                            <iframe width="319" height="217" src={media.source}
+                                frameborder="0" border="0" cellspacing="0" 
+                                className={styles.video}>
+                            </iframe>   
+                            <div className={styles.textContainer}>
+                                <div className={styles.title}>
+                                    <h2>{media.title}</h2>
+                                    <p>{media.duration}min</p>
+                                </div>
+                                <p>{media.description}</p>
+                            </div>
                         </div>
                 </div>
 
                 <div className={styles.categoryCards}>
-                    <CategoryCard category="Favourite" backgraound="/images/placeholder.png" link="/meditationFavourite"/>
-                    <CategoryCard category="Mood and Goal" backgraound="/images/placeholder.png" link="/meditationFavourite"/>
-                    <CategoryCard category="Time" backgraound="/images/placeholder.png" link="/meditationFavourite"/>
-                    <CategoryCard category="Music" backgraound="/images/placeholder.png" link="/meditationFavourite"/>
+                    <CategoryCard category="Favourite" link="/meditationFavourite"/>
+                    <CategoryCard category="Mood and Goal" link="/meditationFavourite"/>
+                    <CategoryCard category="Time" link="/meditationFavourite"/>
+                    <CategoryCard category="Music" link="/meditationFavourite"/>
                 </div>
                 <p>nav bar component</p>
             </div>

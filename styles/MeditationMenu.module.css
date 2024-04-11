@@ -1,23 +1,32 @@
 .container {
-    /* This could goes to global css*/
-    max-width: 430px;
-    max-height: 932px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.messageContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem;
+}
+.badMascot {
+    transform: scaleX(-1);
 }
 .message {
     font-size: var(--font-subheading);
+    color: var(--dark-green);
     width: 273px;
     margin: 0 auto;
     text-align: center;
 }
-.subheading {
+.suggestions {
     width: 80%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     align-items: center;
 }
-.subheading h1{
+.suggestions h2{
     font-size: var(--font-subheading);
 }
 .meditationCards {
@@ -45,7 +54,33 @@
     z-index: 2;
     cursor: pointer;
   }
-  .overlayInnerContainer {
+.overlayInnerContainer {
+    width: 399px;
+    height: 560px;
+    background-color: var(--white);
+    border-radius: 30px;
+    margin: auto;
+    padding: 36px 0;
+    position: relative;
+    top: 20%;
+    }
+.overlayInnerContainer h2 {
+    font-size: var(--font-subheading);
+}
+.closeButton {
+    display: flex;
+    justify-content: flex-end;
     margin: 1rem;
-    color: var(--white);
-  }
+}
+.textContainer {
+    margin: 0 3rem;
+}
+.title {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+}
+.video {
+    display: block;
+    margin: 1rem auto;
+}
