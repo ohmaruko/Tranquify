@@ -1,0 +1,19 @@
+.moodContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quizContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px 20px 18px;
+    background-color: var(--white);
+    border-radius: 30px;
+    width: 390px;
+    height: 566px;
+}
+.singleQuiz h2 {
+    font-size: var(--dont-subheading);
+    text-align: center;
+}

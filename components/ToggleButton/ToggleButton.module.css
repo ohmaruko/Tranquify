@@ -1,0 +1,55 @@
+.toggle {
+    position: relative;
+  }
+  
+  .input {
+    display: none;
+  }
+  
+  .label {
+    display: inline-block;
+    width: 55px; /* Adjust width as needed */
+    height: 20px; /* Adjust height as needed */
+    background-color: #8A8A8A; /* Background color when toggle is off */
+    border-radius: 20px; /* Make it round */
+    cursor: pointer;
+    border: 3px solid gray;
+  }
+  
+  .inner {
+    display: block;
+    width: 20px; 
+    height: 20px; 
+    background-color: #fff; 
+    border-radius: 50%; 
+    transition: transform 0.3s; 
+  }
+
+  .input:checked + .label {
+    background-color: var(--light-green);
+  }
+  
+  .input:checked + .label .inner {
+    transform: translateX(34px); 
+    background-color: var(--white);
+  }
+  
+
+  .textOn, .textOff {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+  }
+  
+  .textOn {
+    left: 9px;
+    color: #fff;
+  }
+  
+  .textOff {
+    left: 25px;
+    color: #000;
+  }
+
+
+  
