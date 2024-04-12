@@ -1,0 +1,25 @@
+.inputBox {
+    width: 330px;
+    height: 55px;
+    border-radius: 20px;
+    border: 2px solid var(--black-green);
+    background-image: url('/images/search.png');
+    background-position: 10px 13px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+.inputBox:focus {
+    border: 1px solid var(--light-green);
+}
+.searchResult {
+    position:absolute;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+}
+.searchResultSingle {
+    background-color: var(--normal-green);
+    padding: 0 131px;
+}

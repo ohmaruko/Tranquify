@@ -1,0 +1,37 @@
+.slider {
+    -webkit-appearance: none;
+    width: 250px;
+    height: 8px;
+    background: var(--light-gray);
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin: 8px;
+    direction: rtl;
+  }
+  
+  .slider:hover {
+    opacity: 0.8;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 52px;
+    height: 52px;
+    background: url(/images/sleep-icon.svg);
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 52px;
+    height: 52px;
+    background: url(/images/.sleep-icon.svg);
+    cursor: pointer;
+  }
+  .sleepLevelLabels {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+  }

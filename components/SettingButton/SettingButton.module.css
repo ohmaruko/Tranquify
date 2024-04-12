@@ -1,0 +1,58 @@
+.button {
+    width: 268px;
+    height: 71px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: var(--light-gray);
+    border: none;
+    margin: 8px;
+    font-family: var(--font-button);
+}
+
+.icon {
+    position: absolute;
+    z-index: 1; 
+    width: 264px;
+    /* top: 50%; */
+    margin-top: 2%;
+    left: -5%;
+    z-index: 1;
+} 
+
+.chevron {
+    position: absolute;
+    z-index: 1; 
+    /* margin-top: -13%; */
+    margin-left: 52%;
+    z-index: 1;
+}
+
+.buttonContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdownContent {
+    display: none; /* Initially hides the dropdown content */
+    background-color: var(--white);
+    border-radius: 20px;
+    border: 2px solid var(--light-green);
+    text-align: left;
+
+    position: absolute;
+    /* left: 18.5%; */
+    z-index: 100; 
+    width: 264px;
+    margin-top: -1.8%;
+    margin-left: 2%;
+    font-family: var(--font-button);
+}
+
+.dropdownContent.active {
+    display: block; 
+}
+
+.dropdownContent p {
+    margin-left: 5%;
+}
