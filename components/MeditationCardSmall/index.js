@@ -9,8 +9,10 @@ export default function MeditationCardSmall({
     thumbnail
 }) {
     const [isSaved, setIsSaved] = useState("#00000000");
-    function heartClickHandler() {
+    function heartClickHandler(e) {
         isSaved === "#00000000" ? setIsSaved("#fff"):setIsSaved("#00000000");
+        e.stopPropagation();
+        e.preventDefault();
     }
     return(
         <Link href={ "./meditationPlayer?media=" + meditation} style={{textDecoration: 'none', color: 'white'}}>
@@ -18,8 +20,7 @@ export default function MeditationCardSmall({
                 <div className={styles.cardInnerContainer}>
                     <div style={{backgroundImage: `url(${thumbnail})`, width: '100%', height: '100%'}} 
                         className={styles.thumbnail}>
-                            {/* need to fix heart icon */}
-                        <svg onClick = {(e) => { heartClickHandler(); e.stopPropagation() }} 
+                        <svg onClick = {(e) => { heartClickHandler(e)}} 
                             className={styles.heart} 
                             xmlns="http://www.w3.org/2000/svg" 
                             width="20" height="19" viewBox="0 0 21 20" fill="none">
