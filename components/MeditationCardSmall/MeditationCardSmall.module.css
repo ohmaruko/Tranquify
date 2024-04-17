@@ -1,0 +1,30 @@
+.cardContainer {
+    width: 430px;
+    height: 112px;
+    background-color: var(--normal-green);
+    border-bottom: 1px solid var(--white);
+}
+.cardInnerContainer {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 42px;
+}
+.thumbnail {
+    max-width: 88px;
+    max-height: 88px;
+    border-radius: 20px;
+    margin: 12px;
+}
+.heart {
+    margin: 60px 0px 0px 60px;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.text p{
+    font-size: var(--font-small-body);
+    margin: 0;
+}

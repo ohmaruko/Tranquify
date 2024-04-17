@@ -14,7 +14,7 @@ export default function MeditationCardMedium({
     }
     return(
         <div className={styles.cardContainer}>
-            <Link href={ "./meditationPlayer?media=" + meditation} style={{textDecoration: 'none'}}>
+            <Link href={ "./meditationPlayer?media=" + meditation} style={{textDecoration: 'none', color: 'black'}}>
                 <div>
                     <div style={{backgroundImage: `url(${thumbnail})`, width: '100%', height: '100%'}} 
                         className={styles.thumbnail}
@@ -29,11 +29,11 @@ export default function MeditationCardMedium({
                         </svg>
                     </div>
                 </div>
+                <div className={styles.text}>
+                    <p>{title}</p>
+                    <p>{time}min</p>
+                </div>
             </Link>
-            <div className={styles.text}>
-                <p>{title}</p>
-                <p>{time}min</p>
-            </div>
         </div>
     )
 }
