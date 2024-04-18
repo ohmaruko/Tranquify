@@ -59,15 +59,15 @@ export default function Weather()
             {weatherData ? (
                 <div className={styles.greetingContainer}>
                     <div className={styles.welcomeContainer}>
-                        <p>Welcome!</p>
-                        <p>{weatherData.name}</p>
-                        <p>{currentDate}</p>
+                        <p className={styles.welcome}>Welcome!</p>
+                        <p className={styles.location}>{weatherData.name}, {weatherData.sys.country}</p>
+                        <p className={styles.date}>{currentDate}</p>
                     </div>
-                    <div>
+                    <div className={styles.weatherContainer}>
                         <div className={styles.weatherIcon}></div>
-                        <p>{weatherData.main.temp}°C</p>
-                        <p>H: {weatherData.main.temp_max}°C</p>
-                        <p>L: {weatherData.main.temp_min}°C</p>
+                        <p className={styles.temperature}>{weatherData.main.temp}°C</p>
+                        <p className={styles.high}>H: {weatherData.main.temp_max}°C</p>
+                        <p className={styles.low}>L: {weatherData.main.temp_min}°C</p>
                     </div>
                     
                     {/* <p>Description: {weatherData.weather[0].description}</p> */}

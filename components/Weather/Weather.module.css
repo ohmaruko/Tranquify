@@ -1,7 +1,28 @@
 .greetingContainer {
     display: flex;
+    justify-content: center;
+    gap: 46px;
 }
 
 .greetingContainer p{
     margin: 0;
+}
+
+.weatherContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome {
+    font-size: var(--font-heading);
+}
+
+.temperature {
+    font-size: var(--font-heading);
+
+}
+
+.high, .low{
+    font-size: var(--font-small-body);
 }
