@@ -17,7 +17,9 @@ export default function Home() {
       </Head>
       <TopBar backButton={false} link='#'/>
       <main className={`${styles.main}`}>
-        <span className={styles.logo}></span>
+        <span className={styles.logo}>
+          
+        </span>
         <h1 className={styles.tranquify}>Tranquify</h1>
         <div className={styles.buttonContainer}>
           <GreenButton greenButtonText="Log in" greenButtonLink="/logIn" />
