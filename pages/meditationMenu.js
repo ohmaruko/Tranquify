@@ -6,11 +6,9 @@ import LinkButton from '@/components/LinkButton';
 import CategoryCard from '@/components/CategoryCard';
 import MeditationCardMedium from '@/components/MeditationCardMedium';
 import { meditationData } from '@/data/meditation';
-import { useState } from 'react';
 
 export default function MeditationMenu() {
-    const [isDisplayed, setIsDisplayed] = useState(false);
-    const [media, setMedia] = useState({});
+    const data = meditationData.meditations
 
     return(
         <>
@@ -27,47 +25,10 @@ export default function MeditationMenu() {
                     <LinkButton link="#" linkText="View More" />
                 </div>
                 <div className={styles.meditationCards}>
-                    <div onClick={()=> {
-                        setIsDisplayed(true); 
-                        setMedia(meditationData.meditations[0]);
-                        }}>
-                        <MeditationCardMedium title={meditationData.meditations[0].title} time={meditationData.meditations[0].duration} thumbnail={meditationData.meditations[0].thumbnail} />
-                    </div>
-                    <div onClick={()=> {
-                        setIsDisplayed(true); 
-                        setMedia(meditationData.meditations[1]);
-                        }}>
-                        <MeditationCardMedium title={meditationData.meditations[1].title} time={meditationData.meditations[1].duration} thumbnail={meditationData.meditations[1].thumbnail} />
-                    </div>
-                    <div onClick={()=> {
-                        setIsDisplayed(true); 
-                        setMedia(meditationData.meditations[2]);
-                        }}>
-                        <MeditationCardMedium title={meditationData.meditations[2].title} time={meditationData.meditations[2].duration} thumbnail={meditationData.meditations[2].thumbnail} />
-                    </div>
+                    <MeditationCardMedium meditation="0" title={data[0].title} time={data[0].duration} thumbnail={data[0].thumbnail} />
+                    <MeditationCardMedium meditation="1" title={data[1].title} time={data[1].duration} thumbnail={data[1].thumbnail} />
+                    <MeditationCardMedium meditation="2" title={data[2].title} time={data[2].duration} thumbnail={data[2].thumbnail} />
                 </div>
-                {/* Overlay screen */}
-                {/* Make a new page for this to make it reusable */}
-                <div className={styles.overlay}
-                    style={{display: isDisplayed ? "block" : "none"}}>
-                        <div className={styles.overlayInnerContainer}>
-                            <div onClick={()=>setIsDisplayed(false)} className={styles.closeButton}>
-                                <Image src='/images/closeButton.svg' alt='Close Button Icon' width={32} height={32} />
-                            </div>
-                            <iframe width="319" height="217" src={media.source}
-                                frameborder="0" border="0" cellspacing="0" 
-                                className={styles.video}>
-                            </iframe>   
-                            <div className={styles.textContainer}>
-                                <div className={styles.title}>
-                                    <h2>{media.title}</h2>
-                                    <p>{media.duration}min</p>
-                                </div>
-                                <p>{media.description}</p>
-                            </div>
-                        </div>
-                </div>
-
                 <div className={styles.categoryCards}>
                     <CategoryCard category="Favourite" link="/meditationFavourite"/>
                     <CategoryCard category="Mood and Goal" link="/meditationFavourite"/>

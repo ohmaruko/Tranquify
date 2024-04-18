@@ -32,6 +32,12 @@ export default function Quiz01({
                                     setIndexSelected(index);
                                     quiz01Score(scores[index]);
                                 }}
+                                onKeyDown={(event) => {
+                                    if(event.key === 'Enter'){
+                                        setIndexSelected(index);
+                                        quiz01Score(scores[index]);
+                                    }
+                                }}
                             />
                         )
                     }

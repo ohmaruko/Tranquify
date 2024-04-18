@@ -7,12 +7,26 @@ export default function Quiz02({
 }) {
     const [stressLevel, setStressLevel] = useState(5);
     quiz02Score(stressLevel);
+
+    // const handleKeyDown = (event) => {
+    //     if(event.target.tabIndex === 3){
+    //         if(event.key === "ArrowRight" && stressLevel >= 3){
+    //             event.preventDefault();
+    //             setStressLevel(parseInt(stressLevel) - 2);
+    //         } else if (event.key === "ArrowLeft" && stressLevel <= 3) {
+    //             event.preventDefault();
+    //             setStressLevel(parseInt(stressLevel) + 2);
+    //         }
+    //     }
+    // }
+
 <<<<<<< HEAD
 
     return(
         <div className={styles.container}>
 =======
     return(
+        <div className={styles.container}>
         <div className={styles.container} tabIndex='8'>
 >>>>>>> origin/main
             <input
@@ -24,9 +38,11 @@ export default function Quiz02({
                 step="2"
                 value={stressLevel}
                 id="slider"
+                tabIndex="8"
                 onChange={(e) => {
                     setStressLevel(e.target.value);
                 }}
+                // onKeyDown={handleKeyDown}
             />
             <div className={styles.stressLevelLabels}>
                 <p>Not Stressed</p>
