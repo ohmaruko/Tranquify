@@ -8,6 +8,7 @@ import SettingIcon from "@/components/SettingIcon";
 import LinkButton from "@/components/LinkButton";
 import FavouriteButton from "@/components/FavouriteButton";
 import Weather from "@/components/Weather";
+import Navigation from "@/components/Navigation";
 
 export default function HomePage() {
 
@@ -95,6 +96,10 @@ export default function HomePage() {
             </div>
             <div className={styles.favourites}>
                 <FavouriteButton link=""/>
+            </div>
+
+            <div className={styles.navigation}>
+                <Navigation/>
             </div>
         </div>
       </main>

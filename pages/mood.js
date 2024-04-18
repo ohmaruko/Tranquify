@@ -5,6 +5,7 @@ import Quiz01 from '@/components/Quiz01';
 import Quiz02 from '@/components/Quiz02';
 import Quiz03 from '@/components/Quiz03';
 import Quiz04 from '@/components/Quiz04';
+import Navigation from '@/components/Navigation';
 import { useState } from 'react';
 
 export default function Mood() {
@@ -52,7 +53,10 @@ export default function Mood() {
                         greenButtonLink={saveButtonHandler()}
                     />
                 </div>
-                <div>nav bar component</div>
+                
+                <div>
+                    <Navigation />
+                </div>
             </div>
         </>
     )

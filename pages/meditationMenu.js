@@ -5,6 +5,7 @@ import SearchBar from '@/components/SearchBar';
 import LinkButton from '@/components/LinkButton';
 import CategoryCard from '@/components/CategoryCard';
 import MeditationCardMedium from '@/components/MeditationCardMedium';
+import Navigation from '@/components/Navigation';
 import { meditationData } from '@/data/meditation';
 
 export default function MeditationMenu() {
@@ -35,7 +36,10 @@ export default function MeditationMenu() {
                     <CategoryCard category="Time" link="/meditationFavourite"/>
                     <CategoryCard category="Music" link="/meditationFavourite"/>
                 </div>
-                <p>nav bar component</p>
+                
+                <div>
+                    <Navigation/>
+                </div>
             </div>
         </>
     )
