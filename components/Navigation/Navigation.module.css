@@ -1,0 +1,46 @@
+.NavBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 430px;
+    height: 94px;
+    flex-shrink: 0;
+    margin-bottom: 0%;
+  }
+  .sticky {
+    position: sticky;
+    bottom: 0;
+    z-index: 1000; /* Adjust as needed */
+  }
+
+  .container {
+    width: 20%;
+  }
+
+  .link {
+    text-decoration: none;
+  }
+  
+  .navItem {
+    text-align: center;
+    text-decoration: none;
+    font-size: var(--font-body);
+    margin-top: 5px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+  }
+
+.label {
+
+}
+
+.icon {
+    width: 36px;
+    margin: auto;
+}
+
+.active .icon svg path {
+    fill: var(--normal-green);
+}
