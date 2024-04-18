@@ -22,7 +22,7 @@ export default function MeditationMenu() {
                 </div>
                 <div className={styles.suggestions}>
                     <h2>Suggestions</h2>
-                    <LinkButton link="#" linkText="View More" />
+                    <LinkButton link="./meditationSuggestions" linkText="View More" />
                 </div>
                 <div className={styles.meditationCards}>
                     <MeditationCardMedium meditation="0" title={data[0].title} time={data[0].duration} thumbnail={data[0].thumbnail} />

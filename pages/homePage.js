@@ -58,13 +58,6 @@ export default function HomePage() {
         </div>
         <div className={styles.content}>
             <div className={styles.greetingsContainer}>
-                <div className={styles.welcomeContainer}>
-                    <h1>Welcome!</h1>
-                    <div>
-                        <p>location</p>
-                        <p>{currentDate}</p>
-                    </div>
-                </div>
                 <Weather/>
                 
             </div>

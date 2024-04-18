@@ -7,6 +7,14 @@ export default function Weather()
 {
         const [location, setLocation] = useState(null);
         const [weatherData, setWeatherData] = useState(null);
+        const [currentDate, setCurrentDate] = useState('');
+
+        useEffect(() => {
+            const date = new Date();
+            const options = { month: 'long', day: 'numeric', year: 'numeric' };
+            const formattedDate = date.toLocaleDateString('en-US', options);
+            setCurrentDate(formattedDate);
+        }, []);
 
         useEffect(() => {
             if (navigator.geolocation) {
@@ -49,12 +57,20 @@ export default function Weather()
     return (
         <div className={styles.weather}>
             {weatherData ? (
-                <div>
-                    <h2>City: {weatherData.name}</h2>
-                    <p>Temperature: {weatherData.main.temp}°C</p>
-                    <p>H: {weatherData.main.temp_max}°C</p>
-                    <p>L: {weatherData.main.temp_min}°C</p>
-                    <p>Description: {weatherData.weather[0].description}</p>
+                <div className={styles.greetingContainer}>
+                    <div className={styles.welcomeContainer}>
+                        <p>Welcome!</p>
+                        <p>{weatherData.name}</p>
+                        <p>{currentDate}</p>
+                    </div>
+                    <div>
+                        <div className={styles.weatherIcon}></div>
+                        <p>{weatherData.main.temp}°C</p>
+                        <p>H: {weatherData.main.temp_max}°C</p>
+                        <p>L: {weatherData.main.temp_min}°C</p>
+                    </div>
+                    
+                    {/* <p>Description: {weatherData.weather[0].description}</p> */}
                 </div>
             ) : (
                 <></>

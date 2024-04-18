@@ -1,11 +1,11 @@
-import styles from '../styles/MeditationFavourite.module.css';
+import styles from '../styles/MeditationSuggestions.module.css';
 import Image from 'next/image'
 import TopBar from '@/components/TopBar';
 import SearchBar from '@/components/SearchBar';
 import MeditationCardSmall from '@/components/MeditationCardSmall';
 import { meditationData } from '@/data/meditation';
 
-export default function MeditationFavourite() {
+export default function MeditationSuggestions() {
     const data = meditationData.meditations;
     return(
         
@@ -14,8 +14,8 @@ export default function MeditationFavourite() {
             <TopBar backButton={true} link="./meditationMenu" />
             <SearchBar />
             <div className={styles.categoryTitle}>
-                <Image src='/Images/favorite.svg' alt='Favorite' width={24} height={24} />
-                <h2>Favorite</h2>
+                <Image src='/Images/suggestion.svg' alt='Suggestions' width={24} height={24} />
+                <h2>Suggestions</h2>
             </div>
             <div className={styles.meditationCardsContainer}>
                 <MeditationCardSmall meditation="0" title={data[0].title} time={data[0].duration} thumbnail={data[0].thumbnail} />
@@ -27,4 +27,3 @@ export default function MeditationFavourite() {
     </>
     )
 }
-

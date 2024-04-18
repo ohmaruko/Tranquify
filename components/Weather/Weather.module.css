@@ -1,0 +1,7 @@
+.greetingContainer {
+    display: flex;
+}
+
+.greetingContainer p{
+    margin: 0;
+}
