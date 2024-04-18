@@ -5,7 +5,7 @@ import GreenButton from "@/components/GreenButton";
 import { useRouter } from "next/router";
 import { meditationData } from "@/data/meditation";
 
-export default function ResultLow() {
+export default function MeditationPlayer() {
     const router = useRouter();
     const meditationContentId = Number(router.query.media);
     const data = meditationData.meditations[meditationContentId]
