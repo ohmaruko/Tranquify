@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./SettingButton.module.css";
+import ToggleButton from "../ToggleButton";
 
 const SettingButton = ({ title, icon, toggle, chevron, children }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);

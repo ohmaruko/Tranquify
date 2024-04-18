@@ -23,7 +23,7 @@
     height: 20px; 
     background-color: #fff; 
     border-radius: 50%; 
-    transition: transform 0.3s; 
+    transition: transform 0.4s; 
   }
 
   .input:checked + .label {
@@ -31,14 +31,14 @@
   }
   
   .input:checked + .label .inner {
-    transform: translateX(34px); 
+    transform: translateX(34.5px); 
     background-color: var(--white);
   }
   
 
   .textOn, .textOff {
     position: absolute;
-    top: 40%;
+    top: 43%;
     transform: translateY(-50%);
   }
   
@@ -48,7 +48,7 @@
   }
   
   .textOff {
-    left: 25px;
+    left: 27px;
     color: #000;
   }
 
