@@ -8,7 +8,7 @@ import {
     BarElement,
     Title,
     Tooltip,
-    Legend
+    Legend,
 } from 'chart.js';
 import { useState, useEffect } from 'react';
 
@@ -18,7 +18,7 @@ ChartJS.register(
     BarElement,
     Title,
     Tooltip,
-    Legend
+    Legend,
 )
 
 export default function Chart() {
@@ -47,17 +47,17 @@ export default function Chart() {
                 },
                 title: {
                     display: true,
-                    text: 'Number of persons with mood disorder in Canada, 2015-2022'
+                    text: 'Number of persons with mood disorder in Canada'
                 },
                 maintainAspectRatio: false,
-                responsive: true
-            }
+                responsive: true,
+            },
         })
     })
 
     return(
         <>
-            <div>
+            <div style={{position: 'relative', width: '290px', height: '150px'}}>
                 <Bar data={chartData} options={chartOptions} style={{width: "500px", height: "300px"}} />
             </div>
         </>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "@/styles/About.module.css";
+import Chart from "@/components/Chart";
 
 export default function About() {
   return (
@@ -22,6 +23,9 @@ export default function About() {
             <br></br>
             As we witness a concerning rise in mood disorders across Canada, our mission is clear: to empower individuals to take charge of their emotional health through accessible and innovative tools. <br></br>
             <br></br>
+          </p>
+          <Chart />
+          <p>
             Join us in this journey towards emotional resilience. Let's prioritize mental health together, one mindful moment at a time.
           </p>
         </div>
