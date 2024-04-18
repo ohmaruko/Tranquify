@@ -29,13 +29,13 @@ export default function Chart() {
 
     useEffect(() => {
         setChartData({
-            labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Sat"],
+            labels: ["2018", "2019", "2020", "2021", "2022"],
             datasets: [
                 {
-                    label: 'Sales $',
-                    data: [10, 5, 1, 7, 2, 14, 15],
+                    label: 'Number of persons',
+                    data: [2802000, 2863500, 2909600, 3132400, 3749600],
                     borderColor: 'rgb(53, 162, 235)',
-                    backgroundColor: 'rgba(53, 162, 235, 0.4)',
+                    backgroundColor: '#627952',
                 }
             ]
         })
@@ -47,7 +47,7 @@ export default function Chart() {
                 },
                 title: {
                     display: true,
-                    text: 'Daily Revenue'
+                    text: 'Number of persons with mood disorder in Canada, 2015-2022'
                 },
                 maintainAspectRatio: false,
                 responsive: true
