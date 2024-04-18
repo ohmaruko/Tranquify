@@ -25,13 +25,13 @@ export default function MeditationPlayer() {
                         {/* <iframe width="319" height="217" src={data.source}
                             frameborder="0" border="0" cellspacing="0">
                         </iframe>    */}
-                        <div>
+                        {/* <div>
                             <div>
                                 <h2 className={styles.title}>{data.title}</h2>
                                 <p>{data.duration}min</p>
                             </div>
                             <p>{data.description}</p>
-                        </div>
+                        </div> */}
                     </div>
                     <div className={styles.button} onClick={() => router.back()}>
                         <GreenButton greenButtonText="Finish Meditation" greenButtonLink="#" />
