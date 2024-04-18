@@ -8,7 +8,7 @@ import { meditationData } from "@/data/meditation";
 export default function MeditationPlayer() {
     const router = useRouter();
     const meditationContentId = Number(router.query.media);
-    const data = meditationData.meditations[meditationContentId]
+    const data = meditationData.meditations[meditationContentId];
 
     return (
         <>
@@ -22,9 +22,9 @@ export default function MeditationPlayer() {
             <main className={`${styles.main}`}>
                 <div className={styles.content}>
                     <div className={styles.meditation}>
-                        <iframe width="319" height="217" src={data.source}
+                        {/* <iframe width="319" height="217" src={data.source}
                             frameborder="0" border="0" cellspacing="0">
-                        </iframe>   
+                        </iframe>    */}
                         <div>
                             <div>
                                 <h2 className={styles.title}>{data.title}</h2>
