@@ -1,0 +1,23 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    min-height: 20vh;
+    padding: 0;
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  .homeTitle {
+    /* font-family: 'Quicksand', sans-serif; */
+    font-size: var(--font-logo);
+    margin-top: 20%;
+  }
+  
+  .appIntro {
+    width: 75%;
+    margin: 39px 0 50px 0;
+  }
+  

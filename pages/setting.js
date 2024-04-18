@@ -149,7 +149,7 @@ export default function Setting() {
           )}
             title="About">
               <div className={styles.dropdownContent}>
-
+              <Link href="./about"><p>About Tranquify</p></Link>
               </div>
             </SettingButton>
 
