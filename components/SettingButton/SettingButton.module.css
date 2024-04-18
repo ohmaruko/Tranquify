@@ -15,9 +15,14 @@
     width: 264px;
     /* top: 50%; */
     margin-top: 2%;
-    left: -5%;
+    left: -2%;
     z-index: 1;
 } 
+
+.toggle {
+    position: absolute;
+    margin-left: 43%;
+}
 
 .chevron {
     position: absolute;
@@ -31,6 +36,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* width: 50%; */
 }
 
 .dropdownContent {

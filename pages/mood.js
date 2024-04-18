@@ -47,10 +47,7 @@ export default function Mood() {
                         </div>
                     </div>
                     <GreenButton 
-<<<<<<< HEAD
-=======
                         tabIndex = '11'
->>>>>>> origin/main
                         greenButtonText='Save' 
                         greenButtonLink={saveButtonHandler()}
                     />

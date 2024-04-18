@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./SettingButton.module.css";
 
-const SettingButton = ({ title, icon, chevron, children }) => {
+const SettingButton = ({ title, icon, toggle, chevron, children }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const toggleDropdown = () => {
@@ -18,6 +18,10 @@ const SettingButton = ({ title, icon, chevron, children }) => {
                     <div className={styles.title}>
                         {title}
                     </div>
+
+                        <div className={styles.toggle}>
+                            {toggle}
+                        </div>
 
                     {/* Render the chevron component if provided */}
                     {chevron && (
