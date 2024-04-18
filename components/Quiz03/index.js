@@ -22,7 +22,6 @@ export default function Quiz02({
 
     return(
         <div className={styles.container}>
-        <div className={styles.container} tabIndex='9'>
             <input
                 className={styles.slider}
                 aria-valuemin={1}

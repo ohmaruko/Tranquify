@@ -20,10 +20,7 @@ export default function Quiz01({
                     moodsGrey.map((icons, index) => {
                         return(
                             <Image 
-<<<<<<< HEAD
-=======
                                 tabIndex={index + 3}
->>>>>>> origin/main
                                 key={index}
                                 src={index === indexSelected? moodsColour[index]:icons}
                                 alt={altText[index]} 

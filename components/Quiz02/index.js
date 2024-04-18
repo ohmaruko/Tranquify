@@ -20,15 +20,8 @@ export default function Quiz02({
     //     }
     // }
 
-<<<<<<< HEAD
-
     return(
         <div className={styles.container}>
-=======
-    return(
-        <div className={styles.container}>
-        <div className={styles.container} tabIndex='8'>
->>>>>>> origin/main
             <input
                 className={styles.slider}
                 aria-valuemin={1}
