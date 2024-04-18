@@ -8,11 +8,7 @@
 }
 
 .logo{
-  width: 218px;
-  height: 218px;
-  background-color: var(--light-gray);
-  border-radius: 50%;
-  margin: 108px 0 27px 0;
+  margin: 108px 0 70px 0;
 }
 
 .tranquify {
