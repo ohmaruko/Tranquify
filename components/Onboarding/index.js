@@ -3,6 +3,7 @@ import LeftArrowButton from "../LeftArrowButton";
 import LinkButton from "../LinkButton";
 import styles from "./Onboarding.module.css";
 import { useState } from 'react';
+import videoLoop from '/images/videos/1_tracker.mp4';
 
 export default function Onboarding() {
     const title = ["Mood Tracker","Mood Calendar","Meditation","Welcome!"];
@@ -47,7 +48,14 @@ export default function Onboarding() {
         <div className={styles.content}>
             <div className={styles.text}>
                 <div className={styles.graphic}>
-
+                <Video
+                    src={videoLoop}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls={false}
+                ></Video>
                 </div>
                 <h1 className={styles.onboardingTitle}>{title[currentIndex]}</h1>
                 <p className={styles.onboardingText}>
