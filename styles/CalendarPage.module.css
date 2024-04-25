@@ -1,0 +1,21 @@
+.container {
+    width: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mascotContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+    margin-bottom: -2%;
+}
+
+.calendarContainer {
+    background-color: var(--white);
+    border-radius: 30px;
+    width: 350px;
+    height: 520px;
+    padding: 20px;
+}

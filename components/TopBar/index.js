@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import styles from "./TopBar.module.css";
 import SettingIcon from "@/components/SettingIcon";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 
 export default function TopBar({
     backButton,
