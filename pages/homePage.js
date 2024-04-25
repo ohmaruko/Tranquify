@@ -19,9 +19,9 @@ export default function HomePage() {
     useEffect(() => {
         setTimeout(()=>{
         setLoaded(true)
-        }, 3000)
+        }, 5000)
         console.log(loaded);
-    });
+    }, []);
 
     const [currentDate, setCurrentDate] = useState('');
 

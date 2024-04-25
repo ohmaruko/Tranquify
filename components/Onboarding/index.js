@@ -3,7 +3,7 @@ import LeftArrowButton from "../LeftArrowButton";
 import LinkButton from "../LinkButton";
 import styles from "./Onboarding.module.css";
 import { useState } from 'react';
-import videoLoop from '/images/videos/1_tracker.mp4';
+// import videoLoop from '/images/videos/1_tracker.mp4';
 
 export default function Onboarding() {
     const title = ["Mood Tracker","Mood Calendar","Meditation","Welcome!"];
@@ -12,6 +12,13 @@ export default function Onboarding() {
         "Visualize your emotional journey over time with our intuitive mood calendar, allowing you to track progress, identify triggers, and celebrate moments of positivity along your mental health journey.",
         "Discover inner peace and mindfulness through guided meditation sessions tailored to your needs, helping you cultivate a sense of calm and clarity in your daily life.",
         "You're all set to embark on your journey towards better well-being."
+    ];
+
+    const video = [
+        "/images/videos/1_tracker.mp4",
+        "/images/videos/2_calendar.mp4",
+        "/images/videos/3_meditation.mp4",
+        "/images/videos/4_welcome.mp4"
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -48,14 +55,7 @@ export default function Onboarding() {
         <div className={styles.content}>
             <div className={styles.text}>
                 <div className={styles.graphic}>
-                <Video
-                    src={videoLoop}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    controls={false}
-                ></Video>
+                <video autoPlay muted loop src={video[currentIndex]} type="video/mp4"></video>
                 </div>
                 <h1 className={styles.onboardingTitle}>{title[currentIndex]}</h1>
                 <p className={styles.onboardingText}>
