@@ -5,7 +5,7 @@ const dm_sans = DM_Sans({ subsets: ["latin"]});
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={dm_sans.className}>
+    <main className={`${dm_sans.className}, container`}>
       <Component {...pageProps} />
     </main>
   )

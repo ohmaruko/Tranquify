@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
 :root {
 
@@ -21,10 +21,13 @@
     --font-body: 16px;
     --font-small-body: 12px;
 }
-
 body {
-    /* margin: 0; */
-    background-color: var(--background-gray);
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--white);
     max-width: 430px;
     margin: 0 auto;
+}
+.container {
+    background-color: var(--background-gray);
+    height: 932px;
 }
