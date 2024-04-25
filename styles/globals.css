@@ -23,11 +23,11 @@
 }
 body {
     font-family: 'DM Sans', sans-serif;
-    background-color: var(--white);
-    max-width: 430px;
-    margin: 0 auto;
+    background-color: rgb(75, 75, 75);
 }
 .container {
     background-color: var(--background-gray);
     height: 932px;
+    width: 430px;
+    margin: 0 auto;
 }
