@@ -5,3 +5,7 @@
     align-items: center;
     padding: 64px 36px 6px;
 }
+
+.backButton {
+    border: none;
+}
