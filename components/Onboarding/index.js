@@ -55,7 +55,7 @@ export default function Onboarding() {
         <div className={styles.content}>
             <div className={styles.text}>
                 <div className={styles.graphic}>
-                <video autoPlay muted loop src={video[currentIndex]} type="video/mp4"></video>
+                    <video autoPlay muted loop src={video[currentIndex]} type="video/mp4"></video>
                 </div>
                 <h1 className={styles.onboardingTitle}>{title[currentIndex]}</h1>
                 <p className={styles.onboardingText}>

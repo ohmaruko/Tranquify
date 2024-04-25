@@ -24,9 +24,16 @@
 body {
     font-family: 'DM Sans', sans-serif;
     background-color: rgb(75, 75, 75);
+    margin: 0 auto;
 }
 .container {
     background-color: var(--background-gray);
+    height: 932px;
+    width: 430px;
+    margin: 0 auto;
+}
+
+html {
     height: 932px;
     width: 430px;
     margin: 0 auto;

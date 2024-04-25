@@ -1,12 +1,11 @@
 .main {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     min-height: 20vh;
     width: 100%;
     overflow-x: hidden;
     background-color: var(--white);
+    overflow-y: scroll;
 }
 
 .loading {
@@ -23,15 +22,19 @@
 
 
 .logo {
-    width: 218px;
-    height: 218px;
-    background-color: var(--light-gray);
-    border-radius: 50%;
+    width: 326px;
+    height: 313px;
     margin: 288px 0 27px 0;
 }
 
+.logo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .text {
-    margin: 63px 0 21px 0;
+    margin: 0 0 21px 0;
     text-align: center;
 }
 
@@ -103,7 +106,9 @@
     display: flex;
     justify-content: flex-end;
     width: 430px;
-    position: absolute;
+    position: relative;
+    top: 72px;
+    right: 36px;
 }
 
 .divideLine {
@@ -165,4 +170,26 @@
 .card p {
     margin: 0;
     font-size: var(--font-body);
+}
+
+.lastCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-right: 31px;
+}
+
+.lastCard p {
+    margin: 0;
+    font-size: var(--font-body);
+
+}
+
+.favourites {
+    padding-bottom: 150px;
+}
+
+.navigation {
+    position: fixed;
 }

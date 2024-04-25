@@ -19,7 +19,7 @@ export default function HomePage() {
     useEffect(() => {
         setTimeout(()=>{
         setLoaded(true)
-        }, 5000)
+        }, 4000)
         console.log(loaded);
     }, []);
 
@@ -45,7 +45,9 @@ export default function HomePage() {
             className={styles.loading}
             style={showHome(loaded)}
         >
-            <div className={styles.logo}></div>
+            <div className={styles.logo}>
+                <video autoPlay muted loop src="/images/videos/loading.mp4" type="video/mp4"></video>
+            </div>
                 <h1 className={styles.text}>Loading</h1>
                 <div className={styles.dotContainer}>
                     <div className={styles.dot}></div>
@@ -77,19 +79,27 @@ export default function HomePage() {
                 </div>
                 <div className={styles.meditationCards}>
                     <div className={styles.card}>
-                        <div className={styles.graphic}></div>
+                        <div className={styles.graphic}>
+                            <Image src="/images/thumbnails/1.png" width="134" height="127" />
+                        </div>
                         <p>Meditation</p>
                     </div>
                     <div className={styles.card}>
-                        <div className={styles.graphic}></div>
+                        <div className={styles.graphic}>
+                            <Image src="/images/thumbnails/2.png" width="134" height="127" />
+                        </div>
                         <p>Meditation</p>
                     </div>
                     <div className={styles.card}>
-                        <div className={styles.graphic}></div>
+                        <div className={styles.graphic}>
+                            <Image src="/images/thumbnails/3a.png" width="134" height="127" />
+                        </div>
                         <p>Meditation</p>
                     </div>
-                    <div className={styles.card}>
-                        <div className={styles.graphic}></div>
+                    <div className={styles.lastCard}>
+                        <div className={styles.graphic}>
+                            <Image src="/images/thumbnails/4.png" width="134" height="127" />
+                        </div>
                         <p>Meditation</p>
                     </div>
                 </div>
