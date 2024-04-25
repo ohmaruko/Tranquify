@@ -52,8 +52,9 @@ export default function Chart() {
                 maintainAspectRatio: false,
                 responsive: true,
             },
+            animation: false
         })
-    })
+    }, []);
 
     return(
         <>
