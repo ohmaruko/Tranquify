@@ -18,6 +18,6 @@
     flex-direction: column;
     align-items: center;
     width: 430px;
-    height: 595px;
+    padding-bottom: 92px;
     background-color: var(--normal-green);
 }

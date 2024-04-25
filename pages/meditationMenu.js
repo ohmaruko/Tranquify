@@ -32,9 +32,9 @@ export default function MeditationMenu() {
                 </div>
                 <div className={styles.categoryCards}>
                     <CategoryCard category="Favourite" link="/meditationFavourite"/>
-                    <CategoryCard category="Mood and Goal" link="/meditationFavourite"/>
-                    <CategoryCard category="Time" link="/meditationFavourite"/>
-                    <CategoryCard category="Music" link="/meditationFavourite"/>
+                    <CategoryCard category="Mood and Goal" link="/meditaionMoodAndGoal"/>
+                    <CategoryCard category="Time" link="/meditationTime"/>
+                    <CategoryCard category="Music" link="/meditationMusic"/>
                 </div>
                 
                 <div>

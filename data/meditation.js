@@ -3,10 +3,9 @@ export const meditationData = {
         {
             title: "Anxiety Away",
             duration: 3,
-            isGuided: true,
-            category: "stress",
+            moodType: ["stress"],
+            misicType: [],
             isSaved: true,
-            isOnlyMusic: false,
             source: "https://www.youtube.com/embed/EfubAj5f_rM?si=gzCDTbEaZOocxzVQ",
             thumbnail: "/images/thumbnails/anxietyAway.png",
             description: "This meditation helps ease anxiety and fosters inner peace through gentle guidance, deep breathing, and visualization. It encourages mindfulness and self-care, empowering individuals to navigate life with greater ease."
@@ -14,10 +13,9 @@ export const meditationData = {
         {
             title: "Get Peace",
             duration: 10,
-            isGuided: true,
-            category: "anger",
+            moodType: ["anger"],
+            misicType: [],
             isSaved: false,
-            isOnlyMusic: false,
             source: "https://www.youtube.com/embed/cZJAsW_5SRA?si=0NPeXUHvPMQ8ECeT",
             thumbnail: "/images/thumbnails/getPeace.png",
             description: "This meditation helps ease anxiety and fosters inner peace through gentle guidance, deep breathing, and visualization. It encourages mindfulness and self-care, empowering individuals to navigate life with greater ease."
@@ -25,10 +23,9 @@ export const meditationData = {
         {
             title: "Forest",
             duration: 10,
-            isGuided: false,
-            category: "",
+            moodType: [],
+            misicType: ["nature"],
             isSaved: false,
-            isOnlyMusic: true,
             source: "https://www.youtube.com/embed/4S3yJkGWM4E?si=X2wBMxllfLH68NTy",
             thumbnail: "/images/thumbnails/forest.png",
             description: "This meditation helps ease anxiety and fosters inner peace through gentle guidance, deep breathing, and visualization. It encourages mindfulness and self-care, empowering individuals to navigate life with greater ease."

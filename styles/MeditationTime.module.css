@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.categoryTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    margin: auto 24px;
+}
+.categoryTitle h2{
+    font-size: var(--font-subheading);
+}
+.meditationCardsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 430px;
+    padding-bottom: 92px;
+    background-color: var(--normal-green);
+}

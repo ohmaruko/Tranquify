@@ -4,6 +4,7 @@ import TopBar from '@/components/TopBar';
 import SearchBar from '@/components/SearchBar';
 import MeditationCardSmall from '@/components/MeditationCardSmall';
 import { meditationData } from '@/data/meditation';
+import Navigation from '@/components/Navigation';
 
 export default function MeditationFavourite() {
     const data = meditationData.meditations;
@@ -22,7 +23,7 @@ export default function MeditationFavourite() {
                 <MeditationCardSmall meditation="1" title={data[1].title} time={data[1].duration} thumbnail={data[1].thumbnail} />
                 <MeditationCardSmall meditation="2" title={data[2].title} time={data[2].duration} thumbnail={data[2].thumbnail} />
             </div>
-            <p>nav bar component</p>
+            <Navigation />
         </div>
     </>
     )
