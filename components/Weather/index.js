@@ -8,6 +8,8 @@ export default function Weather()
         const [location, setLocation] = useState(null);
         const [weatherData, setWeatherData] = useState(null);
         const [currentDate, setCurrentDate] = useState('');
+        const [loading, setLoading] = useState(true);
+        const [icon, setIcon] = useState(null); 
 
         useEffect(() => {
             const date = new Date();
@@ -47,16 +49,49 @@ export default function Weather()
                 const response = await fetch(apiUrl);
                 const data = await response.json();
                 setWeatherData(data);
+                setLoading(false);
             } catch (error) {
                 console.error('Error fetching weather data:', error);
+                setLoading(false);
             }
         };
 
         console.log(weatherData);
 
+        useEffect(() => {
+            if(weatherData) {
+                const weatherIcon = {
+                    "clear sky": '/images/weather/sun.svg',
+                    "few clouds": '/images/weather/cloud.svg',
+                    "scattered clouds": '/images/weather/cloud.svg',
+                    "broken clouds": '/images/weather/cloud.svg',
+                    "shower rain": '/images/weather/rain.svg',
+                    "rain": '/images/weather/rain.svg',
+                    "thunderstorm": '/images/weather/thunder.svg',
+                    "snow": '/images/weather/snow.svg',
+                    "mist": '/images/weather/mist.svg'
+                };
+            
+                const weatherDescription = weatherData.weather[0].description;
+                
+                if (weatherIcon.hasOwnProperty(weatherDescription)) {
+                    setIcon(weatherIcon[weatherDescription]);
+                } else {
+                    setIcon(null); 
+                }
+    
+                setLoading(false);
+            }
+        }, [weatherData])
+
+        console.log('Current icon:', icon);
+
+
     return (
         <div className={styles.weather}>
-            {weatherData ? (
+            {loading ? (
+                <p>Loading...</p>
+            ) : weatherData ? (
                 <div className={styles.greetingContainer}>
                     <div className={styles.welcomeContainer}>
                         <p className={styles.welcome}>Welcome!</p>
@@ -64,7 +99,18 @@ export default function Weather()
                         <p className={styles.date}>{currentDate}</p>
                     </div>
                     <div className={styles.weatherContainer}>
-                        <div className={styles.weatherIcon}></div>
+                {icon && (
+                    <div className={styles.weatherIcon}>
+                        <Image 
+                            src={icon}
+                            alt="weather icon"
+                            width={50}
+                            height={50}
+                            className={styles.weatherIcon}
+                        />
+                    </div>
+                )}
+
                         <p className={styles.temperature}>{weatherData.main.temp}°C</p>
                         <p className={styles.high}>H: {weatherData.main.temp_max}°C</p>
                         <p className={styles.low}>L: {weatherData.main.temp_min}°C</p>
@@ -73,7 +119,7 @@ export default function Weather()
                     {/* <p>Description: {weatherData.weather[0].description}</p> */}
                 </div>
             ) : (
-                <></>
+                <p>Allow location access to get weather data of your current location.</p>
             )}
         </div>
     );
