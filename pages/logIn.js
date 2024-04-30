@@ -41,7 +41,7 @@ export default function LogIn() {
                         <InputField inputType="password" placeholder="Password"/>
                     </form>
                     <div className={styles.logInButton}>
-                        <GreenButton greenButtonText="Log in" greenButtonLink="/onboarding01"/>
+                        <GreenButton greenButtonText="Log in" greenButtonLink="/onboarding"/>
                     </div>
                     
                     <div className={styles.division}>

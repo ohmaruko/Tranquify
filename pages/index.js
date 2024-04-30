@@ -28,7 +28,7 @@ export default function Home() {
           <BeigeButton beigeButtonText="Sign up" beigeButtonLink="signUp" /> 
         </div>
         <div className={styles.linkContainer}>
-          <LinkButton link="/logIn" linkText="Continue as guest" />
+          <LinkButton link="/onboarding" linkText="Continue as guest" />
         </div>
         
       </main>

@@ -1,6 +1,7 @@
 .greetingContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 46px;
 }
 
@@ -10,8 +11,9 @@
 
 .weatherContainer {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .welcome {
@@ -19,8 +21,7 @@
 }
 
 .temperature {
-    font-size: var(--font-heading);
-
+    font-size: var(--font-subheading);
 }
 
 .high, .low{

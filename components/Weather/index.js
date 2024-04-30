@@ -61,18 +61,25 @@ export default function Weather()
         useEffect(() => {
             if(weatherData) {
                 const weatherIcon = {
-                    "clear sky": '/images/weather/sun.svg',
-                    "few clouds": '/images/weather/cloud.svg',
-                    "scattered clouds": '/images/weather/cloud.svg',
-                    "broken clouds": '/images/weather/cloud.svg',
-                    "shower rain": '/images/weather/rain.svg',
-                    "rain": '/images/weather/rain.svg',
-                    "thunderstorm": '/images/weather/thunder.svg',
-                    "snow": '/images/weather/snow.svg',
-                    "mist": '/images/weather/mist.svg'
+                    "Clear": '/images/weather/sun.svg',
+                    "Clouds": '/images/weather/cloud.svg',
+                    "Rain": '/images/weather/rain.svg',
+                    "Drizzle": '/images/weather/rain.svg',
+                    "Thunderstorm": '/images/weather/thunder.svg',
+                    "Snow": '/images/weather/snow.svg',
+                    "Mist": '/images/weather/mist.svg',
+                    "Smoke": '/images/weather/mist.svg',
+                    "Haze": '/images/weather/mist.svg',
+                    "Dust": '/images/weather/mist.svg',
+                    "Fog": '/images/weather/mist.svg',
+                    "Sand": '/images/weather/mist.svg',
+                    "Dust": '/images/weather/mist.svg',
+                    "Ash": '/images/weather/mist.svg',
+                    "Squall": '/images/weather/mist.svg',
+                    "Tornado": '/images/weather/mist.svg',
                 };
             
-                const weatherDescription = weatherData.weather[0].description;
+                const weatherDescription = weatherData.weather[0].main;
                 
                 if (weatherIcon.hasOwnProperty(weatherDescription)) {
                     setIcon(weatherIcon[weatherDescription]);
@@ -99,24 +106,23 @@ export default function Weather()
                         <p className={styles.date}>{currentDate}</p>
                     </div>
                     <div className={styles.weatherContainer}>
-                {icon && (
-                    <div className={styles.weatherIcon}>
-                        <Image 
-                            src={icon}
-                            alt="weather icon"
-                            width={50}
-                            height={50}
-                            className={styles.weatherIcon}
-                        />
+                        {icon && (
+                            <div className={styles.weatherIcon}>
+                                <Image 
+                                    src={icon}
+                                    alt="weather icon"
+                                    width={50}
+                                    height={50}
+                                    className={styles.weatherIcon}
+                                />
+                            </div>
+                        )}
+                        <div className={styles.temperatureContainer}>
+                            <p className={styles.temperature}>{weatherData.main.temp}°C</p>
+                            <p className={styles.high}>H: {weatherData.main.temp_max}°C</p>
+                            <p className={styles.low}>L: {weatherData.main.temp_min}°C</p>
+                        </div>
                     </div>
-                )}
-
-                        <p className={styles.temperature}>{weatherData.main.temp}°C</p>
-                        <p className={styles.high}>H: {weatherData.main.temp_max}°C</p>
-                        <p className={styles.low}>L: {weatherData.main.temp_min}°C</p>
-                    </div>
-                    
-                    {/* <p>Description: {weatherData.weather[0].description}</p> */}
                 </div>
             ) : (
                 <p>Allow location access to get weather data of your current location.</p>

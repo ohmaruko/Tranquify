@@ -47,7 +47,7 @@ export default function SignUp() {
                         />
                     </form>
                     <div className={styles.signUpButton}>
-                        <GreenButton greenButtonText="Sign up" greenButtonLink="/onboarding01"/>
+                        <GreenButton greenButtonText="Sign up" greenButtonLink="/onboarding"/>
                     </div>
                     <p className={styles.haveAccount}>Already have an account?</p>
                     <LinkButton linkText="Log in" link="/logIn" />
