@@ -9,12 +9,15 @@ import LinkButton from "@/components/LinkButton";
 import FavouriteButton from "@/components/FavouriteButton";
 import Weather from "@/components/Weather";
 import Navigation from "@/components/Navigation";
+import MeditationCardHome from "@/components/MeditationCardHome";
+import { meditationData } from '@/data/meditation';
 
 export default function HomePage() {
 
     const [loaded, setLoaded] = useState(false);
 
     const showHome = loaded => loaded == true ? {display: 'none'} : {display: 'flex'};
+    const data = meditationData.meditations;
 
     useEffect(() => {
         setTimeout(()=>{
@@ -73,35 +76,16 @@ export default function HomePage() {
             </div>
             <hr className={styles.divideLine}/>
             <div className={styles.meditationContainer}>
+                
                 <div className={styles.meditation}>
                     <h2>Meditation for you</h2>
                     <LinkButton link="" linkText="View more"/> 
                 </div>
                 <div className={styles.meditationCards}>
-                    <div className={styles.card}>
-                        <div className={styles.graphic}>
-                            <Image src="/images/thumbnails/1.png" width="134" height="127" />
-                        </div>
-                        <p>Meditation</p>
-                    </div>
-                    <div className={styles.card}>
-                        <div className={styles.graphic}>
-                            <Image src="/images/thumbnails/2.png" width="134" height="127" />
-                        </div>
-                        <p>Meditation</p>
-                    </div>
-                    <div className={styles.card}>
-                        <div className={styles.graphic}>
-                            <Image src="/images/thumbnails/3a.png" width="134" height="127" />
-                        </div>
-                        <p>Meditation</p>
-                    </div>
-                    <div className={styles.lastCard}>
-                        <div className={styles.graphic}>
-                            <Image src="/images/thumbnails/4.png" width="134" height="127" />
-                        </div>
-                        <p>Meditation</p>
-                    </div>
+                    <MeditationCardHome link="/images/thumbnails/1.png" title="Meditation"/>
+                    <MeditationCardHome link="/images/thumbnails/2.png" title="Meditation"/>
+                    <MeditationCardHome link="/images/thumbnails/3.png" title="Meditation"/>
+                    <MeditationCardHome link="/images/thumbnails/4.png" title="Meditation"/>
                 </div>
             </div>
             <div className={styles.favourites}>
