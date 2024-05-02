@@ -41,7 +41,7 @@ background: transparent !important;
 .react-calendar__tile--active:hover,
 .react-calendar__tile--active:focus {
   background: transparent;
-  border-radius: 25px;
+  border-radius: 15px;
   border: 3px solid var(--normal-green);
 }
 
