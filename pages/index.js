@@ -6,18 +6,9 @@ import GreenButton from "@/components/GreenButton";
 import BeigeButton from "@/components/BeigeButton";
 import LinkButton from "@/components/LinkButton";
 import {useRouter} from "next/router";
-import {FormattedMessage} from "react-intl";
 import Link from "next/link";
-import { useIntl } from 'react-intl';
 
-export default function Home({ dir }) {
-
-  const { locales } = useRouter();
-  const intl = useIntl();
-
-  const title = intl.formatMessage({id: "page.index.head.title"})
-  const description = intl.formatMessage({id: "page.index.meta.description"})
-
+export default function Home() {
   return (
     <>
       <Head>

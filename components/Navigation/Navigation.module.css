@@ -10,7 +10,7 @@
   }
   .sticky {
     position: fixed;
-    bottom: 0;
+    top: 838px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000; /* Adjust as needed */

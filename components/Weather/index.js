@@ -1,7 +1,7 @@
 import styles from "./Weather.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useMemo } from 'react';
 
 export default function Weather() 
 {
@@ -92,6 +92,8 @@ export default function Weather()
         }, [weatherData])
 
         console.log('Current icon:', icon);
+
+        const memoizedWeatherData = useMemo(() => weatherData, [weatherData]);
 
 
     return (
