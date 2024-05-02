@@ -23,7 +23,7 @@ export const meditationData = {
         {
             title: "Forest",
             duration: 10,
-            moodType: [],
+            moodType: ["sleep"],
             misicType: ["nature"],
             isSaved: false,
             source: "https://www.youtube.com/embed/4S3yJkGWM4E?si=X2wBMxllfLH68NTy",
