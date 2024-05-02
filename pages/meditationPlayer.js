@@ -23,7 +23,8 @@ export default function MeditationPlayer() {
                 <div className={styles.content}>
                     <div className={styles.meditation}>
                         <iframe width="319" height="217" src={data.source}
-                            frameborder="0" border="0" cellspacing="0">
+                            frameborder="0" border="0" cellspacing="0"
+                            loading="lazy">
                         </iframe>   
                         <div>
                             <div>
