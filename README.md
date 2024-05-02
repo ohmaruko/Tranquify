@@ -11,3 +11,6 @@
 
 ## Packages installed
 - Next.js
+- i18n
+npm install next-i18next
+npm i react-intl

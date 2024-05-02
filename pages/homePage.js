@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/HomePage.module.css";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import CalendarCard from "@/components/CalendarCard";
 import TopBar from "@/components/TopBar";
 import SettingIcon from "@/components/SettingIcon";
@@ -11,13 +11,20 @@ import Weather from "@/components/Weather";
 import Navigation from "@/components/Navigation";
 import MeditationCardHome from "@/components/MeditationCardHome";
 import { meditationData } from '@/data/meditation';
+import lottie from "lottie-web";
 
 export default function HomePage() {
 
     const [loaded, setLoaded] = useState(false);
-
+    
+    const [currentDate, setCurrentDate] = useState('');
+    
     const showHome = loaded => loaded == true ? {display: 'none'} : {display: 'flex'};
+    
     const data = meditationData.meditations;
+
+    const loading = useRef(null);
+    
 
     useEffect(() => {
         setTimeout(()=>{
@@ -26,13 +33,25 @@ export default function HomePage() {
         console.log(loaded);
     }, []);
 
-    const [currentDate, setCurrentDate] = useState('');
-
     useEffect(() => {
         const date = new Date();
         const options = { month: 'long', day: 'numeric', year: 'numeric' };
         const formattedDate = date.toLocaleDateString('en-US', options);
         setCurrentDate(formattedDate);
+    }, []);
+
+    useEffect(() => {
+        const anim = lottie.loadAnimation({
+            container: loading.current,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: "/animations/loading.json"
+        });
+
+        return () => {
+            anim.destroy();
+        };
     }, []);
 
   return (
@@ -49,7 +68,7 @@ export default function HomePage() {
             style={showHome(loaded)}
         >
             <div className={styles.logo}>
-                <video autoPlay muted loop src="/images/videos/loading.mp4" type="video/mp4"></video>
+                <div ref={loading} />
             </div>
                 <h1 className={styles.text}>Loading</h1>
                 <div className={styles.dotContainer}>

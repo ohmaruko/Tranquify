@@ -3,9 +3,18 @@ import LeftArrowButton from "../LeftArrowButton";
 import LinkButton from "../LinkButton";
 import styles from "./Onboarding.module.css";
 import { useState } from 'react';
-// import videoLoop from '/images/videos/1_tracker.mp4';
+import lottie from "lottie-web";
+import { useRef, useEffect } from "react";
 
 export default function Onboarding() {
+    const moodTrackerRef = useRef(null);
+    const moodCalendarRef = useRef(null);
+    const meditationRef = useRef(null);
+    const welcomeRef = useRef(null);
+
+    const refs = [moodTrackerRef, moodCalendarRef, meditationRef, welcomeRef];
+    const path = ['/animations/moodtracker.json', '/animations/moodcalendar.json', '/animations/meditation.json', '/animations/welcome.json']
+
     const title = ["Mood Tracker","Mood Calendar","Meditation","Welcome!"];
     const text = [
         "Easily log your emotions throughout the day, gaining insights into your mental well-being and empowering yourself to better understand your mood patterns.",
@@ -51,11 +60,25 @@ export default function Onboarding() {
         console.log(currentIndex);
     }
 
+    useEffect(() => {
+        const anim = lottie.loadAnimation({
+            container: refs[currentIndex].current,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: path[currentIndex]
+        });
+
+        return () => {
+            anim.destroy();
+        };
+    }, [currentIndex, refs]);
+
     return (
         <div className={styles.content}>
             <div className={styles.text}>
                 <div className={styles.graphic}>
-                    <video autoPlay muted loop src={video[currentIndex]} type="video/mp4"></video>
+                    <div ref={refs[currentIndex]} />
                 </div>
                 <h1 className={styles.onboardingTitle}>{title[currentIndex]}</h1>
                 <p className={styles.onboardingText}>
