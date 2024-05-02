@@ -21,3 +21,19 @@
     padding-bottom: 92px;
     background-color: var(--normal-green);
 }
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin: 14px auto;
+    overflow-x: scroll;
+}
+.tabButton {
+    width: 82px;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    color: var(--white);
+    font-size: var(--font-body);
+}
