@@ -3,15 +3,25 @@
 }
 
 .favouriteButton {
-    width: 350px;
+    width: 290px;
     height: 172px;
-    background-color: var(--light-green);
+    background-color: var(--white);
     border-radius: 30px;
-    border: none;
+    border: 3px solid var(--light-green);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 20px 0 32px;
+    text-decoration: none;
+    color: var(--black);
+    overflow: hidden;
+}
+
+.mascot {
+    position: relative;
+    left: 40px;
+    top: 40px;
+    transform: rotate(-12.156deg);
 }
 
 .favouriteText {
@@ -22,6 +32,8 @@
     height: 127px;
     width: 174px;
     gap: 8px;
+    position: relative;
+    left: 30px;
 }
 
 .favouriteText p {
