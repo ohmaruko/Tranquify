@@ -3,13 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import {useState, useEffect, useMemo } from 'react';
 
-export default function Weather() 
-{
+export default function Weather({ setLoaded }) {
         const [location, setLocation] = useState(null);
         const [weatherData, setWeatherData] = useState(null);
         const [currentDate, setCurrentDate] = useState('');
         const [loading, setLoading] = useState(true);
         const [icon, setIcon] = useState(null); 
+        const memoizedWeatherData = useMemo(() => weatherData, [weatherData]);
 
         useEffect(() => {
             const date = new Date();
@@ -50,13 +50,12 @@ export default function Weather()
                 const data = await response.json();
                 setWeatherData(data);
                 setLoading(false);
+                setLoaded(true);
             } catch (error) {
                 console.error('Error fetching weather data:', error);
                 setLoading(false);
             }
         };
-
-        console.log(weatherData);
 
         useEffect(() => {
             if(weatherData) {
@@ -91,10 +90,11 @@ export default function Weather()
             }
         }, [weatherData])
 
-        console.log('Current icon:', icon);
-
-        const memoizedWeatherData = useMemo(() => weatherData, [weatherData]);
-
+        useEffect(() => {
+            if (weatherData) {
+                setLoaded(true);
+            }
+        }, [weatherData, setLoaded]);
 
     return (
         <div className={styles.weather}>

@@ -62,7 +62,7 @@ export default function HomePage() {
             </Head>
             <main className={styles.main}>
                 <div className={styles.content}>
-                    {!loaded ? ( // Show loading animation if not loaded
+                    {!loaded ? ( 
                         <div className={styles.loading}>
                             <div className={styles.logo}>
                                 <div ref={loading} />
@@ -81,7 +81,7 @@ export default function HomePage() {
                             </div>
                             <div className={styles.content}>
                                 <div className={styles.greetingsContainer}>
-                                    <Weather/>
+                                    <Weather setLoaded={setLoaded} />
                                 </div>
                                 <div className={styles.calendar}>
                                     <CalendarCard i="4"/>
