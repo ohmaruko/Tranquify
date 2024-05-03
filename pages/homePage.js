@@ -106,9 +106,7 @@ export default function HomePage() {
                                 <div className={styles.favourites}>
                                     <FavouriteButton link="/meditationFavourite"/>
                                 </div>
-                                <div className={styles.navigation}>
-                                    <Navigation/>
-                                </div>
+                                <Navigation/>
                             </div>
                         </div>
                     )}

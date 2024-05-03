@@ -9,7 +9,7 @@
     margin-bottom: 0%;
   }
   .sticky {
-    position: fixed;
+    position: absolute;
     top: 838px;
     left: 50%;
     transform: translateX(-50%);
