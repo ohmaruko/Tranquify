@@ -10,6 +10,9 @@ export default function MeditationPlayer() {
     const router = useRouter();
     const meditationContentId = Number(router.query.media);
     const data = meditationData.meditations[meditationContentId];
+    if (!data || !data.source) {
+        return <div>Loading...</div>;
+    }
 
     //for the YouTube player
     const opts = {
