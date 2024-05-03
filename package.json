@@ -19,6 +19,7 @@
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
     "react-intl": "^6.6.5",
+    "react-youtube": "^10.1.0",
     "styled-components": "^6.1.9"
   }
 }

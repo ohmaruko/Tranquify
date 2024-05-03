@@ -6,7 +6,7 @@ export const meditationData = {
             moodType: ["stress"],
             misicType: [],
             isSaved: true,
-            source: "https://www.youtube.com/embed/EfubAj5f_rM?si=gzCDTbEaZOocxzVQ",
+            source: "EfubAj5f_rM",
             thumbnail: "/images/thumbnails/anxietyAway.png",
             description: "This meditation helps ease anxiety and fosters inner peace through gentle guidance, deep breathing, and visualization. It encourages mindfulness and self-care, empowering individuals to navigate life with greater ease."
         },
@@ -16,7 +16,7 @@ export const meditationData = {
             moodType: ["anger"],
             misicType: [],
             isSaved: false,
-            source: "https://www.youtube.com/embed/cZJAsW_5SRA?si=0NPeXUHvPMQ8ECeT",
+            source: "cZJAsW_5SRA",
             thumbnail: "/images/thumbnails/getPeace.png",
             description: "This meditation helps ease anxiety and fosters inner peace through gentle guidance, deep breathing, and visualization. It encourages mindfulness and self-care, empowering individuals to navigate life with greater ease."
         },
@@ -26,7 +26,7 @@ export const meditationData = {
             moodType: ["sleep"],
             misicType: ["nature"],
             isSaved: false,
-            source: "https://www.youtube.com/embed/4S3yJkGWM4E?si=X2wBMxllfLH68NTy",
+            source: "4S3yJkGWM4E",
             thumbnail: "/images/thumbnails/forest.png",
             description: "This meditation helps ease anxiety and fosters inner peace through gentle guidance, deep breathing, and visualization. It encourages mindfulness and self-care, empowering individuals to navigate life with greater ease."
         }

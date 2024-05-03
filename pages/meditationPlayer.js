@@ -4,11 +4,21 @@ import TopBar from "@/components/TopBar";
 import GreenButton from "@/components/GreenButton";
 import { useRouter } from "next/router";
 import { meditationData } from "@/data/meditation";
+import YouTube from 'react-youtube';
 
 export default function MeditationPlayer() {
     const router = useRouter();
     const meditationContentId = Number(router.query.media);
     const data = meditationData.meditations[meditationContentId];
+
+    //for the YouTube player
+    const opts = {
+        height: '217',
+        width: '319',
+        playerVars: {
+            autoplay: 1,
+        },
+    };
 
     return (
         <>
@@ -22,10 +32,7 @@ export default function MeditationPlayer() {
             <main className={`${styles.main}`}>
                 <div className={styles.content}>
                     <div className={styles.meditation}>
-                        <iframe width="319" height="217" src={data.source}
-                            frameborder="0" border="0" cellspacing="0"
-                            loading="lazy">
-                        </iframe>   
+                        <YouTube videoId={data.source} opts={opts} />
                         <div>
                             <div>
                                 <h2 className={styles.title}>{data.title}</h2>
