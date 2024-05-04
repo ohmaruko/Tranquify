@@ -8,6 +8,12 @@ import Navigation from '@/components/Navigation';
 
 export default function MeditationFavourite() {
     const data = meditationData.meditations;
+    let savedContents = [];
+    meditationData.meditations.map( item => {
+        if(item.isSaved){
+            savedContents.push(item);
+        }
+    })
     return(
         
         <>
@@ -19,9 +25,13 @@ export default function MeditationFavourite() {
                 <h2>Favorite</h2>
             </div>
             <div className={styles.meditationCardsContainer}>
-                <MeditationCardSmall meditation="0" title={data[0].title} time={data[0].duration} thumbnail={data[0].thumbnail} />
-                <MeditationCardSmall meditation="1" title={data[1].title} time={data[1].duration} thumbnail={data[1].thumbnail} />
-                <MeditationCardSmall meditation="2" title={data[2].title} time={data[2].duration} thumbnail={data[2].thumbnail} />
+                {
+                    savedContents.map((item, index) => {
+                        return(
+                            <MeditationCardSmall meditation={index} title={item.title} time={item.duration} thumbnail={item.thumbnail} />
+                        )
+                    })
+                }
             </div>
             <Navigation />
         </div>
