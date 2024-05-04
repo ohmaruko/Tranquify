@@ -94,13 +94,16 @@ export default function HomePage() {
                                 <div className={styles.meditationContainer}>
                                     <div className={styles.meditation}>
                                         <h2>Meditation for you</h2>
-                                        <LinkButton link="" linkText="View more"/> 
+                                        <LinkButton link="/meditationMenu" linkText="View more"/> 
                                     </div>
                                     <div className={styles.meditationCards}>
-                                        <MeditationCardHome link="/images/thumbnails/1.png" title="Meditation"/>
-                                        <MeditationCardHome link="/images/thumbnails/2.png" title="Meditation"/>
+                                        <MeditationCardHome title={data[0].title} link={data[0].thumbnail}/>
+                                        <MeditationCardHome title={data[2].title} link={data[2].thumbnail}/>
+                                        <MeditationCardHome title={data[7].title} link={data[7].thumbnail}/>
+                                        <MeditationCardHome title={data[1].title} link={data[1].thumbnail}/>
+                                        {/* <MeditationCardHome link="/images/thumbnails/2.png" title="Meditation"/>
                                         <MeditationCardHome link="/images/thumbnails/3.png" title="Meditation"/>
-                                        <MeditationCardHome link="/images/thumbnails/4.png" title="Meditation"/>
+                                        <MeditationCardHome link="/images/thumbnails/4.png" title="Meditation"/> */}
                                     </div>
                                 </div>
                                 <div className={styles.favourites}>

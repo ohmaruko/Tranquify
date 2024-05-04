@@ -10,8 +10,8 @@ export default function MeditationCardHome({
         <div className={styles.cardContainer}>
             <Link href="" style={{textDecoration: 'none', color: 'black'}}>
                 <div className={styles.card}>
-                    <div className={styles.graphic}>
-                        <Image src={link} width="134" height="127" />
+                    <div className={styles.graphicContainer}>
+                        <Image src={link} width="134" height="127" className={styles.graphic}/>
                     </div>
                     <p>{title}</p>
                 </div>

@@ -10,6 +10,10 @@
     font-size: var(--font-body);
 }
 
+.graphic {
+    border-radius: 30px;
+}
+
 .lastCard {
     display: flex;
     flex-direction: column;
