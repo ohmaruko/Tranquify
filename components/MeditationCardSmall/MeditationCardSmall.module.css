@@ -16,8 +16,16 @@
     border-radius: 20px;
     margin: 12px;
 }
-.heart {
-    margin: 60px 0px 0px 60px;
+.thumbnailInner {
+    width: 88px;
+    height: 88px;
+}
+.titleContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 .text {
     display: flex;
@@ -25,6 +33,11 @@
     justify-content: center;
 }
 .text p{
-    font-size: var(--font-small-body);
+    font-size: var(--font-body);
     margin: 0;
+}
+.saveIcon {
+    width: 30px;
+    height: 30px;
+    margin: 0 15px;
 }
