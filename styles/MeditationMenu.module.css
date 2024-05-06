@@ -3,42 +3,78 @@
     flex-direction: column;
     justify-content: center;
 }
-.messageContainer {
+.pageTitleContainer {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin: 1rem;
+    justify-content: center;
 }
-.badMascot {
-    transform: scaleX(-1);
-}
-.message {
+.pageTitle {
     font-size: var(--font-subheading);
     color: var(--dark-green);
-    width: 273px;
-    margin: 0 auto;
-    text-align: center;
+    margin: 27px auto 0;
 }
-.suggestions {
-    width: 80%;
+.suggestionsContainer {
+    margin: 0 23px;
+}
+.suggestionsTitle {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     align-items: center;
 }
-.suggestions h2{
-    font-size: var(--font-subheading);
+.suggestionsTitle p{
+    font-size: var(--font-body);
+    font-weight: bold;
+    color: var(--dark-green);
 }
 .meditationCards {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 41px;
+}
+.categoryContainer {
+    margin: 0 23px;
+}
+.categoryContainer p{
+    font-size: var(--font-body);
+    font-weight: bold;
+    color: var(--dark-green);
 }
 .categoryCards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 17px;
+    gap: 12px;
+    margin: 12px 0;
+}
+.favouriteCard {
+    min-width: 384px;
+    min-height: 125px;
+    border-radius: 30px;
+    background-color: var(--light-green);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.favouriteCard a {
+    width: 100%;
+    height: 125px;
+    display: flex;
+    flex-direction: row;
+}
+.favouriteCard h1 {
+    font-size: var(--font-subheading);
+    color: var(--black);
+    position: relative;
+    top: 35px;
+    left: 50px;
+}
+.mascot {
+    position: relative;
+    top: 30px;
+    left: 180px;
+    transform: rotate(-12.156deg);
 }
