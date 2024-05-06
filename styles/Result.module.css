@@ -27,7 +27,6 @@
     margin-bottom: 20px;
     gap: 13px;
 }
-
 .suggestionText {
     font-size: var(--font-body);
 }

@@ -18,9 +18,9 @@ export default function Mood() {
     function saveButtonHandler() {
         return (
             scoreOne === 0 || scoreFour === 0 ? ""
-                : totalScore >= 4 && totalScore <= 10 ? "./resultLow?mood=" + scoreOne
-                    : totalScore >= 11 && totalScore <= 15? "./resultMedium?mood=" + scoreOne
-                        : "./resultHigh?mood=" + scoreOne
+                : totalScore >= 4 && totalScore <= 10 ? "./result?mood=" + scoreOne + "&total=" + totalScore
+                    : totalScore >= 11 && totalScore <= 15? "./result?mood=" + scoreOne + "&total=" + totalScore
+                        : "./result?mood=" + scoreOne + "&total=" + totalScore
         )
     }
 
