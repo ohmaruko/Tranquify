@@ -5,13 +5,10 @@
     gap: 6px;
 }
 .thumbnail {
-    width: 100%;
-    height: 100%;
+    width: 128px;
+    height: 128px;
     border-radius: 30px;
-}
-.thumbnailInner {
-   width: 128px;
-   height: 128px;
+    background-size: 128px 128px;
 }
 .titleContainer {
     display: flex;
@@ -22,8 +19,9 @@
 .text p{
     font-size: var(--font-small-body);
     margin: 0;
+    max-width: 90px;
 }
 .saveIcon {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 }

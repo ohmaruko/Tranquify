@@ -15,6 +15,7 @@
     max-height: 88px;
     border-radius: 20px;
     margin: 12px;
+    background-size: 88px 88px;
 }
 .thumbnailInner {
     width: 88px;

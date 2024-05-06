@@ -35,18 +35,20 @@ export default function SearchBar() {
                 onClick={() => setIsOpen(false)}
               />
             </div>
-            <div className={styles.meditaions}>
-              {
-                meditationData.meditations.map( x => {
-                return(
-                  searchInput.length > 0 && x.title.toLocaleLowerCase().includes(searchInput)? 
-                      <div className={styles.searchResultSingle}>
-                        <MeditationCardMedium title={x.title} time={x.duration} source={x.source} thumbnail={x.thumbnail}/>
-                      </div>
-                    :<></>
-                )
-                })
-              }
+            <div className={styles.meditationCardsOuterContainer}>
+                <div className={styles.meditationCardsInnerContainer}>
+                {
+                  meditationData.meditations.map( (item, index) => {
+                  return(
+                    searchInput.length > 0 && item.title.toLocaleLowerCase().includes(searchInput)? 
+                        <div className={styles.searchResultSingle}>
+                          <MeditationCardMedium meditation={index} title={item.title} time={item.duration} source={item.source} thumbnail={item.thumbnail}/>
+                        </div>
+                      :<></>
+                  )
+                  })
+                }
+              </div>
             </div>
           </div>
           :<></>
