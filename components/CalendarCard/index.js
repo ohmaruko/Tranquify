@@ -28,7 +28,7 @@ export default function CalendarCard({i}) {
                     
                     <div className={styles.moodIcon}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                            <circle cx="20" cy="20" r="20" fill="#9DB580"/>
+                            <circle className={styles.addIcon} cx="20" cy="20" r="20"/>
                             <path d="M13 20H27" stroke="white" stroke-width="2" stroke-linecap="round"/>
                             <path d="M20 13L20 27" stroke="white" stroke-width="2" stroke-linecap="round"/>
                         </svg>

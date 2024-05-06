@@ -35,3 +35,11 @@
     width: 40px;
     height: 40px;
 }
+
+.addIcon {
+    fill: var(--light-green);
+}
+
+.addIcon:hover {
+    fill: var(--normal-green);
+}
