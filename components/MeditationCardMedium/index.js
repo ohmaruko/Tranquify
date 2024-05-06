@@ -20,7 +20,6 @@ export default function MeditationCardMedium({
             <Link href={ "./meditationPlayer?media=" + meditation} style={{textDecoration: 'none', color: 'black'}}>
                 <div>
                     <div style={{backgroundImage: `url(${thumbnail})`}} className={styles.thumbnail}>
-                        <div className={styles.thumbnailInner}></div>
                     </div>
                 </div>
                 <div className={styles.titleContainer}>

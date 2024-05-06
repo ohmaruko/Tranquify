@@ -1,13 +1,14 @@
 .CategoryCardContainer {
-    max-width: 120px;
+    max-width: 114px;
     min-height: 157px;
     width: 100%;
     border-radius: 30px;
-    background-color: var(--light-green);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background-color: var(--white);
+    border: 3px solid var(--light-green);
 }
 .CategoryCardContainer a {
     width: 100%;

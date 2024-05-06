@@ -10,6 +10,9 @@
     border-radius: 30px;
     background-size: 128px 128px;
 }
+.cardContainer:hover .thumbnail{
+    opacity: 80%;
+}
 .titleContainer {
     display: flex;
     flex-direction: row;

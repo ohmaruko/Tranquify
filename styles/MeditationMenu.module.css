@@ -52,7 +52,8 @@
     min-width: 384px;
     min-height: 125px;
     border-radius: 30px;
-    background-color: var(--light-green);
+    background-color: var(--white);
+    border: 3px solid var(--light-green);
     display: flex;
     flex-direction: row;
     align-items: center;
