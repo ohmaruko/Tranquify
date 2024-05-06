@@ -41,7 +41,7 @@ export default function MeditationMoodAndGoal() {
             <TopBar backButton={true} link="./meditationMenu" />
             <SearchBar />
             <div className={styles.categoryTitle}>
-                <h2>Mood and Goals</h2>
+                <h2>Music</h2>
             </div>
             <div className={styles.menuContainer}>
                 <div className={styles.menu}>
