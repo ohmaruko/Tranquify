@@ -43,30 +43,34 @@ export default function MeditationMoodAndGoal() {
             <div className={styles.categoryTitle}>
                 <h2>Time</h2>
             </div>
-            <div className={styles.menu}>
-                {
-                    menus && menus.map((e) => {
-                        return (
-                            <button 
-                                onClick={() => {handleMenu(e); changeColor(e)}}
-                                className={styles.tabButton}
-                                style = {{ backgroundColor: selectedButton === e ? "var(--normal-green)": "var(--light-gray",}}
-                                >{e}min
-                            </button>
-                        )
-                    })
-                }
+            <div className={styles.menuContainer}>
+                <div className={styles.menu}>
+                    {
+                        menus && menus.map((e) => {
+                            return (
+                                <button 
+                                    onClick={() => {handleMenu(e); changeColor(e)}}
+                                    className={styles.tabButton}
+                                    style = {{ backgroundColor: selectedButton === e ? "var(--normal-green)": "var(--light-gray",}}
+                                    >{e}min
+                                </button>
+                            )
+                        })
+                    }
+                </div>
             </div>
-            <div className={styles.meditationCardsContainer}>
-                {
-                    dataId.map( id => {
-                        let meditationContent = meditationData.meditations[id];
-                        console.log(meditationContent.title);
-                        return(
-                            <MeditationCardSmall meditation={id} title={meditationContent.title} time={meditationContent.duration} thumbnail={meditationContent.thumbnail} />
-                        )
-                    })
-                }
+            <div className={styles.meditationCardsOuterContainer}>
+                <div className={styles.meditationCardsInnerContainer}>
+                    {
+                        dataId.map( id => {
+                            let meditationContent = meditationData.meditations[id];
+                            console.log(meditationContent.title);
+                            return(
+                                <MeditationCardSmall meditation={id} title={meditationContent.title} time={meditationContent.duration} thumbnail={meditationContent.thumbnail} />
+                            )
+                        })
+                    }
+                </div>
             </div>
             <Navigation />
         </div>

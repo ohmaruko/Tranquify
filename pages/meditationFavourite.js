@@ -24,7 +24,8 @@ export default function MeditationFavourite() {
                 <Image src='/Images/favorite.svg' alt='Favorite' width={24} height={24} />
                 <h2>Favorite</h2>
             </div>
-            <div className={styles.meditationCardsContainer}>
+            <div className={styles.meditationCardsOuterContainer}>
+                <div className={styles.meditationCardsInnerContainer}>
                 {
                     savedContents.map((item, index) => {
                         return(
@@ -32,6 +33,7 @@ export default function MeditationFavourite() {
                         )
                     })
                 }
+                </div>
             </div>
             <Navigation />
         </div>

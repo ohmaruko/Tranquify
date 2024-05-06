@@ -13,21 +13,15 @@
 .categoryTitle h2{
     font-size: var(--font-subheading);
 }
-.meditationCardsContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 430px;
-    padding-bottom: 92px;
-    background-color: var(--normal-green);
+.menuContainer {
+    overflow-x: auto;
 }
 .menu {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     justify-content: center;
     gap: 10px;
     margin: 14px auto;
-    overflow-x: scroll;
 }
 .tabButton {
     width: 82px;
@@ -36,4 +30,18 @@
     border: none;
     color: var(--white);
     font-size: var(--font-body);
+}
+.meditationCardsOuterContainer {
+    overflow-y: auto;
+    min-height: 595px;
+    max-height: 595px;
+    background-color: var(--normal-green);
+}
+.meditationCardsInnerContainer {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 430px;
+    padding-bottom: 94px;
 }
