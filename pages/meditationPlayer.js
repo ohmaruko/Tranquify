@@ -5,6 +5,8 @@ import GreenButton from "@/components/GreenButton";
 import { useRouter } from "next/router";
 import { meditationData } from "@/data/meditation";
 import YouTube from 'react-youtube';
+import Image from 'next/image';
+import { useState } from "react";
 
 export default function MeditationPlayer() {
     const router = useRouter();
@@ -23,6 +25,13 @@ export default function MeditationPlayer() {
         },
     };
 
+    //save button
+    const [isSaved, setIsSaved] = useState("./images/unsaved-icon-green.svg");
+    function heartClickHandler(e) {
+        isSaved === './images/unsaved-icon-green.svg' ? setIsSaved('./images/saved-icon-green.svg') : setIsSaved('./images/unsaved-icon-green.svg');
+        // e.stopPropagation();
+        e.preventDefault();
+    }
     return (
         <>
             <Head>
@@ -36,11 +45,14 @@ export default function MeditationPlayer() {
                 <div className={styles.content}>
                     <div className={styles.meditation}>
                         <YouTube videoId={data.source} opts={opts} />
-                        <div>
-                            <div>
+                        <div className={styles.textContainer}>
+                            <div className={styles.titleContainer}>
                                 <h2 className={styles.title}>{data.title}</h2>
-                                <p>{data.duration}min</p>
+                                <div onClick = {(e) => { heartClickHandler(e)}} className={styles.saveIcon}>
+                                    <Image src={isSaved} alt='heart icon' width={22} height={20} />
+                                </div>
                             </div>
+                            <p>{data.duration}min</p>
                             <p>{data.description}</p>
                         </div>
                     </div>
