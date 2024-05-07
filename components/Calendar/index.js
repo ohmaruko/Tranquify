@@ -13,8 +13,6 @@ const MyCustomCalendar = styled(Calendar)`
 width: 100%;
 max-width: 600px;
 margin: 0 auto;
-border: 1px solid #ccc;
-border-radius: 25px;
 
 .react-calendar__tile {
   /* Add styles for individual tiles */
@@ -24,6 +22,10 @@ border-radius: 25px;
   border-radius: 25px;
   width: 10px;
   height: 70px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
 
@@ -46,12 +48,14 @@ background: transparent !important;
 }
 
 .react-calendar__navigation__label > span {
-  font-size:  larger;
-  font-weight: 300;
+  font-weight: 500;
+  font-size: var(--font-button);
   color: black;
+  font-family: DM Sans;
+  display: flex;
 }
 .react-calendar__navigation__label {
-  background: transparent;
+  background: transparent !important;
 }
 
 .react-calendar__tile {
@@ -62,13 +66,20 @@ background: transparent !important;
   background: beige;
   width: 20px;
   border-radius: 50%;
+  margin-left: 15%;
+  margin-right: 15%
 }
 
 .react-calendar__navigation__prev2-button,
 .react-calendar__navigation__next2-button {
-display: none;
+  display: none;
 }
 
+
+
+
+
+}
 `;
 
 
@@ -81,7 +92,7 @@ export default function CalendarComponent() {
     <MyCustomCalendar
       calendarType="gregory"
       onChange={onChange}
-      formatDay={(locale, date) => moment(date).format("DD")}
+      formatDay={(locale, date) => moment(date).format("D")}
       value={value}
       minDetail="month"
       maxDetail="month"
