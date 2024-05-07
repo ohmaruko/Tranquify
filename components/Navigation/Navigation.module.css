@@ -46,3 +46,9 @@
 .active .icon svg path {
     fill: var(--normal-green);
 }
+.moodActive .icon svg path {
+    fill: var(--normal-green);
+}
+.meditationActive .icon svg path {
+    fill: var(--normal-green);
+}

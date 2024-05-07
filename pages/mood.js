@@ -18,9 +18,9 @@ export default function Mood() {
     function saveButtonHandler() {
         return (
             scoreOne === 0 || scoreFour === 0 ? ""
-                : totalScore >= 4 && totalScore <= 10 ? "./result?mood=" + scoreOne + "&total=" + totalScore
-                    : totalScore >= 11 && totalScore <= 15? "./result?mood=" + scoreOne + "&total=" + totalScore
-                        : "./result?mood=" + scoreOne + "&total=" + totalScore
+                : totalScore >= 4 && totalScore <= 10 ? "./moodResult?mood=" + scoreOne + "&total=" + totalScore
+                    : totalScore >= 11 && totalScore <= 15? "./moodResult?mood=" + scoreOne + "&total=" + totalScore
+                        : "./moodResult?mood=" + scoreOne + "&total=" + totalScore
         )
     }
     //error message popup and sound
