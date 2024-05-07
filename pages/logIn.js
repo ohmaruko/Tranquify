@@ -9,7 +9,8 @@ import {useState} from 'react';
 
 export default function LogIn() {
     const [email, setEmail] = useState('');
-    const [emailValid, setEmailValid] = useState(true); // Initially set to true
+    const [emailValid, setEmailValid] = useState(true);
+    const [showErrorMessage, setShowErrorMessage] = useState(false);
 
     const handleEmailChange = (event) => {
         const { value } = event.target;
@@ -17,6 +18,18 @@ export default function LogIn() {
         // Validate email format using a regular expression
         setEmailValid(/^\S+@\S+\.\S+$/.test(value));
     };
+
+    //error message popup and sound
+    const handleLogin = () => {
+        event.preventDefault();
+
+        if (!emailValid) {
+            new Audio("./audio/error_sound.mp3").play();
+            setShowErrorMessage(true);
+        } else {
+            window.location.href = "/onboarding";
+        }
+    }
 
     return (
         <>
@@ -37,10 +50,17 @@ export default function LogIn() {
                              onChange={handleEmailChange}
                              invalid={!emailValid}
                         />
+                        {
+                            showErrorMessage && (  
+                                 <div className={styles.errorMessage}>
+                                    <p>* Please enter a valid email address.</p>
+                                </div> 
+                            )
+                        }
                         <InputField inputType="password" placeholder="Password"/>
                     </form>
-                    <div className={styles.logInButton}>
-                        <GreenButton greenButtonText="Log in" greenButtonLink="/onboarding"/>
+                    <div className={styles.logInButton} onClick={() => handleLogin()}>
+                        <GreenButton greenButtonText="Log in" greenButtonLink=""/>
                     </div>
                     
                     <div className={styles.division}>

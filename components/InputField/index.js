@@ -1,4 +1,5 @@
 import styles from "./InputField.module.css";
+import { useState } from 'react';
 
 export default function InputField({placeholder, inputType, value, onChange, invalid}) {
 

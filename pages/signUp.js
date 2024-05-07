@@ -9,7 +9,8 @@ import { useState } from 'react';
 
 export default function SignUp() {
     const [email, setEmail] = useState('');
-    const [emailValid, setEmailValid] = useState(true); // Initially set to true
+    const [emailValid, setEmailValid] = useState(true); 
+    const [showErrorMessage, setShowErrorMessage] = useState(false);
 
     const handleEmailChange = (event) => {
         const { value } = event.target;
@@ -17,6 +18,17 @@ export default function SignUp() {
         // Validate email format using a regular expression
         setEmailValid(/^\S+@\S+\.\S+$/.test(value));
     };
+
+    const handleLogin = () => {
+        event.preventDefault();
+
+        if (!emailValid) {
+            new Audio("./audio/error_sound.mp3").play();
+            setShowErrorMessage(true);
+        } else {
+            window.location.href = "/onboarding";
+        }
+    }
 
     return (
         <>
@@ -40,13 +52,20 @@ export default function SignUp() {
                             onChange={handleEmailChange}
                             invalid={!emailValid}
                         />
+                        {
+                            showErrorMessage && ( 
+                                 <div className={styles.errorMessage}>
+                                    <p>* Please enter a valid email address.</p>
+                                </div> 
+                            )
+                        }
                         <InputField 
                             inputType="password" 
                             placeholder="Password"
                         />
                     </form>
-                    <div className={styles.signUpButton}>
-                        <GreenButton greenButtonText="Sign up" greenButtonLink="/onboarding"/>
+                    <div className={styles.signUpButton} onClick={() => handleLogin()}>
+                        <GreenButton greenButtonText="Sign up" greenButtonLink=""/>
                     </div>
                     <p className={styles.haveAccount}>Already have an account?</p>
                     <LinkButton linkText="Log in" link="/logIn" />

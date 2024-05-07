@@ -61,3 +61,9 @@
 .noAccount {
     margin: 0 0 5px 0;
 }
+
+.errorMessage p{
+    color: red;
+    font-size: var(--font-small-body);
+    margin: -15px 0 12px 0;
+}   

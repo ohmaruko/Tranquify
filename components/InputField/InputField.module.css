@@ -7,6 +7,12 @@
     padding: 0 22px;
     font-size: var(--font-body);
     color: var(--black);
+    font-family: 'DM Sans', sans-serif; 
+}
+
+.input::placeholder {
+    font-family: 'DM Sans', sans-serif; 
+    color: #888; 
 }
 
 .invalid {

@@ -7,6 +7,7 @@
     font-size: var(--font-button);
     font-weight: bold;
     text-align: center;
+    font-family: 'DM Sans', sans-serif; 
 }
 
 .button:hover {
