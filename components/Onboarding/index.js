@@ -92,7 +92,12 @@ export default function Onboarding() {
                 <LeftArrowButton 
                     onClick = {()=> {handleLeftArrowButton()}}
                     displayStyle = {display}
-                    
+                    tabIndex="0"
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                            handleLeftArrowButton(); 
+                        }
+                    }}
                 />
                 <div className={styles.dotContainer}>
                     <div className={`${styles.dot} ${currentIndex === 0 ? styles.dotActive : "" }`}></div>

@@ -33,7 +33,7 @@ export default function Quiz04({
                     meditationGrey.map((icons, index) => {
                         return(
                             <Image 
-                                tabIndex={index + 10}
+                                tabIndex={mood ? -1 : index + 10}
                                 key={index}
                                 src={mood ? index == indexRecorded? meditationGreen[index]:icons
                                     : index === indexSelected? meditationGreen[index]:icons}

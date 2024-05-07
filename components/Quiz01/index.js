@@ -35,7 +35,7 @@ export default function Quiz01({
                     moodsGrey.map((icons, index) => {
                         return(
                             <Image 
-                                tabIndex={index + 3}
+                                tabIndex={mood ? -1 : index + 3}
                                 key={index}
                                 src={mood ? index == indexRecorded? moodsColour[index]:icons
                                     : index === indexSelected? moodsColour[index]:icons}
