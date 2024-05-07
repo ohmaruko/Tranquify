@@ -1,12 +1,20 @@
 import styles from './Quiz03.module.css';
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
 
 export default function Quiz02({
     quiz03Score
 }) {
     const [sleepLevel, setSleepLevel] = useState(5);
+    const [sleepLevelRecorded, setSleepLevelRecorded] = useState();
     quiz03Score(sleepLevel);
+
+    const router = useRouter();
+    const mood = router.query.mood;
+
+    useEffect(() => {
+        setSleepLevelRecorded(mood[2])
+    }, [mood])
 
     // const handleKeyDown = (event) => {
     //     if(event.target.tabIndex === 3){
@@ -29,7 +37,7 @@ export default function Quiz02({
                 min="1"
                 max="5"
                 step="2"
-                value={sleepLevel}
+                value={mood ? sleepLevelRecorded : sleepLevel}
                 tabIndex='9'
                 id="slider"
                 onChange={(e) => {

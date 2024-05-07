@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from './Quiz01.module.css';
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
 
 export default function Quiz01({
     quiz01Score
@@ -12,6 +13,18 @@ export default function Quiz01({
     const scores = [5, 4, 3, 2, 1]
 
     const [indexSelected, setIndexSelected] = useState();
+    const [indexRecorded, setIndexRecorded] = useState();
+
+    const router = useRouter();
+    const mood = router.query.mood;
+
+    useEffect(() => {
+        setIndexRecorded(mood[0])
+    }, [mood])
+
+    console.log("mood " + mood)
+    console.log("index " + indexRecorded)
+  
 
     return(
         <div className={styles.moodsContainer}>
@@ -22,7 +35,8 @@ export default function Quiz01({
                             <Image 
                                 tabIndex={index + 3}
                                 key={index}
-                                src={index === indexSelected? moodsColour[index]:icons}
+                                src={mood ? index == indexRecorded? moodsColour[index]:icons
+                                    : index === indexSelected? moodsColour[index]:icons}
                                 alt={altText[index]} 
                                 width={55} height={55} 
                                 onClick= {() => {

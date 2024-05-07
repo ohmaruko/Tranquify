@@ -84,11 +84,11 @@ export default function HomePage() {
                                     <Weather setLoaded={setLoaded} />
                                 </div>
                                 <div className={styles.calendar}>
-                                    <CalendarCard i="4"/>
-                                    <CalendarCard i="3"/>
-                                    <CalendarCard i="2"/>
-                                    <CalendarCard i="1"/>
-                                    <CalendarCard i="0"/>
+                                    <CalendarCard i="4" icon="/images/terrible-icon.svg" link="/moodRecord" iconIndex={4}/>
+                                    <CalendarCard i="3" icon="/images/ok-icon.svg" link="/moodRecord" iconIndex={2}/>
+                                    <CalendarCard i="2" icon="/images/add-calendar.svg" link="/mood"/>
+                                    <CalendarCard i="1" icon="/images/great-icon.svg" link="/moodRecord" iconIndex={0}/>
+                                    <CalendarCard i="0" icon="/images/add-calendar.svg" link="/mood"/>
                                 </div>
                                 <hr className={styles.divideLine}/>
                                 <div className={styles.meditationContainer}>

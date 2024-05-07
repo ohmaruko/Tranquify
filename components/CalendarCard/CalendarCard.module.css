@@ -12,6 +12,11 @@
     border: 3px solid var(--normal-green);
 }
 
+.calendarCard:hover {
+    background-color: var(--background-gray);
+    opacity: 0.8;
+}
+
 .calendarDate {
     display: flex;
     flex-direction: column;
@@ -34,12 +39,4 @@
 .moodIcon {
     width: 40px;
     height: 40px;
-}
-
-.addIcon {
-    fill: var(--light-green);
-}
-
-.addIcon:hover {
-    fill: var(--normal-green);
 }

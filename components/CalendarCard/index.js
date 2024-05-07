@@ -1,9 +1,15 @@
 import styles from "./CalendarCard.module.css";
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from "next/image";
 
-export default function CalendarCard({i}) {
+export default function CalendarCard({i, icon, link, iconIndex}) {
     const [currentDate, setCurrentDate] = useState({ day: '', weekday: '' });
+    const [mood, setMood] = useState("");
+
+    const terribleArray = ["4", "1", "3", "1"];
+    const okArray = ["2", "3", "3", "1"];
+    const greatArray = ["0", "5", "5", "0"];
 
     useEffect(() => {
         const today = new Date();
@@ -17,9 +23,21 @@ export default function CalendarCard({i}) {
         setCurrentDate({ day, weekday });
     }, []);
 
+    useEffect(() => {
+        if(iconIndex === 4) {
+            setMood(terribleArray);
+        } else if(iconIndex === 2) {
+            setMood(okArray);
+        } else if(iconIndex === 0) {
+            setMood(greatArray);
+        } 
+    }, [iconIndex]);
+
+    console.log("icon:" + icon);
+
     return (
         <div>
-            <Link href="/mood" className={styles.calendarCard}>
+            <Link href={{ pathname: link, query: { mood: mood } }} className={styles.calendarCard}>
                 <div className={styles.content}>
                     <div className={styles.calendarDate}>
                         <p className={styles.weekday}>{currentDate.weekday}</p>
@@ -27,11 +45,12 @@ export default function CalendarCard({i}) {
                     </div>
                     
                     <div className={styles.moodIcon}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                            <circle className={styles.addIcon} cx="20" cy="20" r="20"/>
-                            <path d="M13 20H27" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M20 13L20 27" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
+                        <Image 
+                            src={icon}
+                            alt="add button"
+                            width={45} height={45} 
+                            className={styles.addButton}
+                        />
                     </div>
                 </div>
             </Link>

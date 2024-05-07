@@ -61,17 +61,19 @@ export default function Onboarding() {
     }
 
     useEffect(() => {
-        const anim = lottie.loadAnimation({
-            container: refs[currentIndex].current,
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: path[currentIndex]
-        });
-
-        return () => {
-            anim.destroy();
-        };
+        if (refs[currentIndex]?.current) {
+            const anim = lottie.loadAnimation({
+                container: refs[currentIndex].current,
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: path[currentIndex]
+            });
+    
+            return () => {
+                anim.destroy();
+            };
+        }
     }, [currentIndex, refs]);
 
     return (
