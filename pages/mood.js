@@ -23,13 +23,20 @@ export default function Mood() {
                         : "./result?mood=" + scoreOne + "&total=" + totalScore
         )
     }
-
+    //error message popup and sound
+    const [isError, setIsError] = useState(false);
+    function errorMessage() {
+        if(scoreOne === 0 || scoreFour === 0) {
+            new Audio("./audio/error_sound.mp3").play();
+            setIsError(true);
+        }
+    }
     return(
         <>
             <div className={styles.container}>
                 <TopBar backButton={true} link='homePage'/>
                 <div className={styles.moodContainer}>
-                    <div className={styles.date}>April 3, 2024</div>
+                    <div className={styles.date}>April 17, 2024</div>
                     <div className={styles.quizContainer}>
                         <div className={styles.singleQuiz}>
                             <h2>How was your day?</h2>
@@ -48,11 +55,24 @@ export default function Mood() {
                             <Quiz04 quiz04Score={(score) => setScoreFour(score)}/>
                         </div>
                     </div>
-                    <GreenButton 
-                        tabIndex = '11'
-                        greenButtonText='Save' 
-                        greenButtonLink={saveButtonHandler()}
-                    />
+                    <div onClick={() => errorMessage()}>
+                        <GreenButton 
+                            tabIndex = '11'
+                            greenButtonText='Save' 
+                            greenButtonLink={saveButtonHandler()}
+                        />
+                    </div>
+                    {/* error message overley */}
+                    {
+                        isError?
+                            <div className={styles.errorMessageContainer} onClick={() => setIsError(false)}>
+                                <div className={styles.errorMessage}>
+                                    <h2>Incomplete Input</h2>
+                                    <p>Please answer all the questions</p>
+                                </div>
+                            </div>
+                            :<></>
+                    }
                 </div>
                 <div>
                     <Navigation />
