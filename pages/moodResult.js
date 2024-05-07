@@ -55,7 +55,7 @@ export default function ResultLow() {
                         </div>
                     </div>
                     <div className={styles.meditationButton}>
-                        <GreenButton greenButtonText="Start Meditation" greenButtonLink="/meditationMenu"/>
+                        <GreenButton greenButtonText="Start Meditation" greenButtonLink="/meditation"/>
                     </div>
                     <div>
                         <Navigation />

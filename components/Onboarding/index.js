@@ -92,6 +92,7 @@ export default function Onboarding() {
                 <LeftArrowButton 
                     onClick = {()=> {handleLeftArrowButton()}}
                     displayStyle = {display}
+                    
                 />
                 <div className={styles.dotContainer}>
                     <div className={`${styles.dot} ${currentIndex === 0 ? styles.dotActive : "" }`}></div>

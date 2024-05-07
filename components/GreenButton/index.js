@@ -11,7 +11,7 @@ export default function GreenButton({greenButtonText, greenButtonLink}) {
     return (
         <div>
             {/* maybe make a prop for tabIndex if we use tab key for other pages too */}
-            <Link href={greenButtonLink} className={styles.buttonText} onKeyDown={handleKeyDown} tabIndex='11'>
+            <Link href={greenButtonLink} className={`${styles.buttonText}`} onKeyDown={handleKeyDown} >
                 <button className={styles.button}>
                     {greenButtonText}
                 </button>
