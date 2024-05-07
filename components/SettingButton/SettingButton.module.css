@@ -1,4 +1,8 @@
 .button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 268px;
     height: 71px;
     flex-shrink: 0;
@@ -8,35 +12,31 @@
     margin: 8px;
     font-family: var(--font-button);
 }
-
+.button:hover {
+    background: #C2C2C2;
+}
+.iconAndTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+}
 .icon {
-    position: absolute;
-    z-index: 1; 
-    width: 264px;
-    /* top: 50%; */
-    margin-top: 2%;
-    left: -2%;
-    z-index: 1;
+    padding: 13px;
 } 
 
+.title {
+    text-align: left;
+}
+
 .toggle {
-    position: absolute;
-    margin-left: 43%;
+    position: relative;
 }
 
 .chevron {
-    position: absolute;
-    z-index: 1; 
-    /* margin-top: -13%; */
-    margin-left: 52%;
-    z-index: 1;
-}
-
-.buttonContent {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: 50%; */
 }
 
 .dropdownContent {

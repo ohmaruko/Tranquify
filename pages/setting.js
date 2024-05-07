@@ -40,8 +40,8 @@ export default function Setting() {
                             >
                                 {/* children prop - displays dropdown content */}
                                 <div className={styles.dropdownContent}>
-                                <Link href="./logIn"><p>Log In</p></Link>
-                                <Link href="./signUp"><p>Sign Up</p></Link>
+                                  <Link href="./logIn"><p>Log In</p></Link>
+                                  <Link href="./signUp"><p>Sign Up</p></Link>
                                 </div>
                             </SettingButton>
 

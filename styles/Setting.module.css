@@ -8,6 +8,10 @@
     height: 932px;
     margin: auto; 
   }
+  .popupWrapper a {
+    text-decoration: none;
+    color: var(--black);
+  }
   
   .closeButton {
     margin-left: 20px;
