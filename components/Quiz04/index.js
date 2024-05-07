@@ -19,9 +19,12 @@ export default function Quiz04({
     const router = useRouter();
     const mood = router.query.mood;
 
-    useEffect(() => {
-        setIndexRecorded(mood[3])
-    }, [mood])
+    if(mood) {
+        useEffect(() => {
+            setIndexRecorded(mood[3])
+        }, [])
+    }
+    
 
     return(
         <div className={styles.meditationContainer}>

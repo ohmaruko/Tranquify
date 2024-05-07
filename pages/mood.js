@@ -14,7 +14,7 @@ export default function Mood() {
     const [scoreThree, setScoreThree] = useState(0);
     const [scoreFour, setScoreFour] = useState(0);
     const totalScore = Number(scoreOne) + Number(scoreTwo) + Number(scoreThree) + Number(scoreFour);
-    
+
     function saveButtonHandler() {
         return (
             scoreOne === 0 || scoreFour === 0 ? ""

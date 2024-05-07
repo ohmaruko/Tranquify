@@ -12,9 +12,12 @@ export default function Quiz02({
     const router = useRouter();
     const mood = router.query.mood;
 
-    useEffect(() => {
-        setSleepLevelRecorded(mood[2])
-    }, [mood])
+    if(mood) {
+        useEffect(() => {
+            setSleepLevelRecorded(mood[2])
+        }, [])
+    }
+    
 
     // const handleKeyDown = (event) => {
     //     if(event.target.tabIndex === 3){

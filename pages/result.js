@@ -4,6 +4,7 @@ import TopBar from "@/components/TopBar";
 import GreenButton from "@/components/GreenButton";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import Navigation from "@/components/Navigation";
 
 export default function ResultLow() {
     const moodMascots = ['/images/terrible-mascot.svg', '/images/bad-mascot.svg', '/images/ok-mascot.svg', '/images/good-mascot.svg', '/images/great-mascot.svg']
@@ -56,6 +57,9 @@ export default function ResultLow() {
                     </div>
                     <div className={styles.meditationButton}>
                         <GreenButton greenButtonText="Start Meditation" greenButtonLink="/meditationMenu"/>
+                    </div>
+                    <div>
+                        <Navigation />
                     </div>
                 </div>
             </main>

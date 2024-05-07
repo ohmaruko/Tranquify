@@ -18,9 +18,11 @@ export default function Quiz01({
     const router = useRouter();
     const mood = router.query.mood;
 
-    useEffect(() => {
+    if(mood) {
+         useEffect(() => {
         setIndexRecorded(mood[0])
-    }, [mood])
+    }, [])
+    }
 
     console.log("mood " + mood)
     console.log("index " + indexRecorded)

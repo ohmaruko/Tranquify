@@ -14,9 +14,12 @@ export default function Quiz02({
     const router = useRouter();
     const mood = router.query.mood;
 
-    useEffect(() => {
+    if(mood) {
+        useEffect(() => {
         setStressLevelRecorded(mood[1])
-    }, [mood])
+    }, [])
+    }
+    
 
     // const handleKeyDown = (event) => {
     //     if(event.target.tabIndex === 3){
