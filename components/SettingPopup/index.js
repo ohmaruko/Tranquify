@@ -152,7 +152,7 @@ const SettingPopup = () => {
 
                         </div>
                     </div>
-                // </div>
+                 </div>
             )}
         </>
     );
