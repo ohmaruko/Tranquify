@@ -1,0 +1,44 @@
+.recordTitle {
+    font-size: var(--font-subheading);
+    color: var(--dark-green);
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+.moodContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.moodContainer h2 {
+    font-size: var(--font-subheading);
+}
+.moodContainer p {
+    font-size: var(--font-body);
+}
+.quizContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px 20px 14px;
+    background-color: var(--white);
+    border-radius: 30px;
+    width: 390px;
+    height: 566px;
+}
+.singleQuiz {
+    margin: -5px;
+}
+.singleQuiz h2 {
+    text-align: center;
+}
+.errorMessageContainer {
+    background-color: rgba(0, 0, 0, 0.30);;
+    width: 430px;
+    height: 932px;
+    position: relative;
+    bottom: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

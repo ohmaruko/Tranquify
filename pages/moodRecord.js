@@ -1,4 +1,4 @@
-import styles from '../styles/mood.module.css';
+import styles from '../styles/moodRecord.module.css';
 import TopBar from '@/components/TopBar';
 import GreenButton from '@/components/GreenButton';
 import Quiz01 from '@/components/Quiz01';
@@ -33,6 +33,7 @@ export default function Mood() {
             <div className={styles.container}>
                 <TopBar backButton={true} link='homePage'/>
                 <div className={styles.moodContainer}>
+                    <div className={styles.recordTitle}>Your Record</div>
                     <div className={styles.date}>April 3, 2024</div>
                     <div className={styles.quizContainer}>
                         <div className={styles.singleQuiz}>
