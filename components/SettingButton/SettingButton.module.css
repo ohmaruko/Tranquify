@@ -49,9 +49,9 @@
     position: absolute;
     /* left: 18.5%; */
     z-index: 100; 
-    width: 264px;
+    width: 265px;
     margin-top: -1.8%;
-    margin-left: 2%;
+    margin-left: 8.6px;
     font-family: var(--font-button);
 }
 
