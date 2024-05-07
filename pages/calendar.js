@@ -1,7 +1,6 @@
 import Navigation from '@/components/Navigation';
 import { useState } from 'react';
 import Calendar from '@/components/Calendar';
-import TopBar from '@/components/TopBar';
 import Image from 'next/image';
 import styles from '@/styles/CalendarPage.module.css'
 
@@ -11,7 +10,6 @@ export default function renderCalendar() {
   <div className={styles.container}>
 
     <div className={styles.main}>
-      <TopBar backButton={true}/>
 
       <div className={styles.mascotContainer}>
       <Image src='/images/great-mascot.svg' alt='great-mascot' width={60} height={60} />

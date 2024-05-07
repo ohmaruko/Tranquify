@@ -13,6 +13,7 @@ const MyCustomCalendar = styled(Calendar)`
 width: 100%;
 max-width: 600px;
 margin: 0 auto;
+border: none !important;
 
 .react-calendar__tile {
   /* Add styles for individual tiles */
