@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 64px 36px 6px;
+    padding: 64px 0 6px;
 }
 
 .backButton {

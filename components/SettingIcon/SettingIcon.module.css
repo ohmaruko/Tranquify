@@ -1,11 +1,15 @@
 .settingIconContainer {
     /* margin: 64px 36px 0 0; */
     z-index: 1000;
+    min-width: 430px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .settingIcon {
     color: var(--light-green);
     z-index: 1000;
+    margin: 0 30px;
 }
 
 .settingIcon:hover {
