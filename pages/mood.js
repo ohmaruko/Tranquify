@@ -34,7 +34,6 @@ export default function Mood() {
     return(
         <>
             <div className={styles.container}>
-                <TopBar backButton={true} link='homePage'/>
                 <div className={styles.moodContainer}>
                     <div className={styles.date}>April 17, 2024</div>
                     <div className={styles.quizContainer}>

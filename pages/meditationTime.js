@@ -38,7 +38,6 @@ export default function MeditationMoodAndGoal() {
     return(
         <>
         <div className={styles.container}>
-            <TopBar backButton={true} link="./meditationMenu" />
             <SearchBar />
             <div className={styles.categoryTitle}>
                 <h2>Time</h2>

@@ -15,7 +15,6 @@ export default function MeditationMenu() {
     return(
         <>
             <div className={styles.container}>
-                <TopBar backButton={false} link="#" />
                 <SearchBar />
                 <div className={styles.pageTitleContainer}>
                     <h1 className={styles.pageTitle}>Meditation</h1>

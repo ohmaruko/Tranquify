@@ -12,7 +12,6 @@ export default function MeditationSuggestions() {
         
         <>
         <div className={styles.container}>
-            <TopBar backButton={true} link="./meditationMenu" />
             <SearchBar />
             <div className={styles.categoryTitle}>
                 <Image src='/Images/suggestion.svg' alt='Suggestions' width={24} height={24} />

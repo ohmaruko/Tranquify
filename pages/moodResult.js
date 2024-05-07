@@ -25,7 +25,6 @@ export default function ResultLow() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <TopBar backButton={false} link='#'/>
             <main className={`${styles.main}`}>
                 <div className={styles.content}>
                     <div className={styles.resultCard}>

@@ -18,7 +18,6 @@ export default function MeditationFavourite() {
         
         <>
         <div className={styles.container}>
-            <TopBar backButton={true} link="./meditationMenu" />
             <SearchBar />
             <div className={styles.categoryTitle}>
                 <Image src='/Images/favorite.svg' alt='Favorite' width={24} height={24} />

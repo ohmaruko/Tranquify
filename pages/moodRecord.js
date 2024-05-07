@@ -31,7 +31,6 @@ export default function Mood() {
     return(
         <>
             <div className={styles.container}>
-                <TopBar backButton={true} link='homePage'/>
                 <div className={styles.moodContainer}>
                     <div className={styles.recordTitle}>Your Record</div>
                     <div className={styles.date}>April 3, 2024</div>

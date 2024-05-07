@@ -6,6 +6,9 @@
     overflow-x: hidden;
     background-color: var(--white);
     overflow-y: scroll;
+    position: relative;
+    top: -120px;
+    z-index: 1000;
 }
 
 .loading {

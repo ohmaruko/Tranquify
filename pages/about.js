@@ -7,7 +7,6 @@ export default function About() {
   return (
     <>
       <main className={styles.main}>
-        <TopBar backButton={true} link="setting"/>
         <div className={styles.container}>
           <h1 className={styles.homeTitle}>About Us</h1>
           <div className={styles.mascotContainer}>

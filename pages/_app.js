@@ -1,3 +1,4 @@
+import TopBar from "@/components/TopBar";
 import "@/styles/globals.css";
 import { DM_Sans } from "next/font/google";
 import {useRouter} from "next/router";
@@ -20,6 +21,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <main className={`${dm_sans.className}, container`}>
+      <TopBar />
       <Component {...pageProps} dir={getDirection(locale)} />
     </main>
   )
