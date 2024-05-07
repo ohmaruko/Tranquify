@@ -1,12 +1,9 @@
 .popupWrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 72px;
-
     width: 430px;
     height: 932px;
-    margin: auto; 
+    margin: 0 auto; 
   }
   .popupWrapper a {
     text-decoration: none;
