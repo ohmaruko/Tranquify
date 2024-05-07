@@ -4,10 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import ToggleButton from "@/components/ToggleButton";
 import RadioButton from "@/components/RadioButton";
+import { useRouter } from 'next/router';
 
 export default function Setting() {
-  const link = "/";
-  const backButton = true;
+  const router = useRouter();
+  const handleBack = () => {
+      router.back();
+  };
 
   return (
     <>
@@ -16,9 +19,9 @@ export default function Setting() {
         <div className={styles.popupContainer}>
 
           {/* adding back button */}
-          <Link href={link} style={{ display: backButton === true ? 'block' : 'none' }}>
+          <div onClick={handleBack}>
             <Image src='/images/back-button.svg' width={21} height={19} className={styles.closeButton}/>
-          </Link>
+          </div>
 
           <h1 className={styles.moreSettings}>More Settings</h1>
 
