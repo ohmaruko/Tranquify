@@ -15,7 +15,7 @@
 }
 .meditationCardsOuterContainer {
     overflow-y: auto;
-    min-height: 595px;
+    min-height: 610px;
     max-height: 595px;
     background-color: var(--normal-green);
 }
