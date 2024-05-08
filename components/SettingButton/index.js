@@ -8,11 +8,25 @@ const SettingButton = ({ title, icon, toggle, chevron, children }) => {
         setIsDropdownOpen(!isDropdownOpen);
     };
 
+    const handleKeyPress = (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+            // Toggle dropdown on Enter or Space press
+            toggleDropdown();
+            event.preventDefault();
+            event.stopPropagation();
+        }
+    };
+
     return (
-        <div className={styles.settingButton}>
-            <button className={styles.button} onClick={toggleDropdown}>
+        <div className={styles.settingButton} >
+            <button
+                className={styles.button}
+                onClick={toggleDropdown}
+                onKeyDown={handleKeyPress} // Listen for key press events
+                tabIndex="0" // Make the button focusable
+            >
                 <div className={styles.iconAndTitle}>
-                     <div className={styles.icon}>
+                    <div className={styles.icon}>
                         {icon}
                     </div>
                     <div className={styles.title}>
@@ -25,7 +39,7 @@ const SettingButton = ({ title, icon, toggle, chevron, children }) => {
                 </div>
 
                 {/* Render the chevron component if provided */}
-                {chevron? (
+                {chevron ? (
                     <div className={styles.chevron}>
                         {isDropdownOpen ? (
                             // Render the open chevron
@@ -39,17 +53,14 @@ const SettingButton = ({ title, icon, toggle, chevron, children }) => {
                             </svg>
                         )}
                     </div>
-                    ): <div className={styles.chevron}></div>
-                }
+                ) : <div className={styles.chevron}></div>}
             </button>
 
             <div className={`${styles.dropdownContent} ${isDropdownOpen ? styles.active : ''}`}>
                 {children}
             </div>
-
         </div>
     );
 };
 
 export default SettingButton;
-

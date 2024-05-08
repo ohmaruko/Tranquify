@@ -87,8 +87,8 @@ export default function Setting() {
             )}
             >
                 <div className={styles.dropdownContent}>
-                    <span>English {<RadioButton/>}</span>
-                    <span>French {<RadioButton/>}</span>
+                <span tabIndex="0">English {<RadioButton tabIndex="0" />}</span>
+                    <span tabIndex="0">French {<RadioButton tabIndex="0" />}</span>
                 </div>
             </SettingButton>
 
@@ -107,9 +107,9 @@ export default function Setting() {
             )}
             >
                 <div className={styles.dropdownContent}>
-                    <span>Regular {<RadioButton/>}</span>
-                    <span>Large {<RadioButton/>}</span>
-                    <span>Larger {<RadioButton/>}</span>
+                    <span tabIndex="0">Regular {<RadioButton tabIndex="0" />}</span>
+                    <span tabIndex="0">Large {<RadioButton tabIndex="0" />}</span>
+                    <span tabIndex="0">Larger {<RadioButton tabIndex="0" />}</span>
                 </div>
             </SettingButton>
 
@@ -121,7 +121,7 @@ export default function Setting() {
               </svg>
                   )}
             title="Sound"
-            toggle = {<ToggleButton/>}
+            toggle = {<ToggleButton tabIndex="0" />}
             />
 
             <SettingButton02
@@ -131,7 +131,7 @@ export default function Setting() {
                 </svg>
                   )}
             title="Dark Mode"
-            toggle = {<ToggleButton />}
+            toggle = {<ToggleButton tabIndex="0" />}
             >
             </SettingButton02>
 

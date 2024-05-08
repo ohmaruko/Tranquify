@@ -3,10 +3,9 @@ import styles from "./SettingButton02.module.css";
 
 const SettingButton02 = ({ title, icon, link, toggle }) => {
 
-
     return (
         <div>
-            <a href={link} className={styles.button}>
+            <a href={link} className={styles.button}    tabIndex="-1">
                 <div className={styles.iconAndTitle}>
                      <div className={styles.icon}>
                         {icon}

@@ -13,6 +13,16 @@ const SettingPopup = () => {
         setIsOpen(false);
     };
 
+
+    const handleKeyDown = (event) => {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          event.stopPropagation();
+          event.currentTarget();
+          isSetOpen;
+        }
+      };
+
     return (
         <>
             {isOpen && (
@@ -21,7 +31,7 @@ const SettingPopup = () => {
 
                         <div className={styles.popup}>
 
-                            <button className={styles.closeButton} onClick={handleClosePopup}>
+                            <button className={styles.closeButton} onClick={handleClosePopup} tabIndex="-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                                     <path d="M4.80695 4.13232L21.5345 21.9999" stroke="#9DB580" stroke-width="7" stroke-linecap="round" />
                                     <path d="M21.55 4L3.99999 21.55" stroke="#9DB580" stroke-width="7" stroke-linecap="round" />
@@ -33,6 +43,7 @@ const SettingPopup = () => {
                             <div className={styles.buttonContainer}>
 
                                 <SettingButton 
+                                    onKeyDown={handleKeyDown}
                                     icon={(
                                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                             <path fillRule="evenodd" clipRule="evenodd" d="M5 4C5 2.93913 5.42143 1.92172 6.17157 1.17157C6.92172 0.421427 7.93913 0 9 0C10.0609 0 11.0783 0.421427 11.8284 1.17157C12.5786 1.92172 13 2.93913 13 4C13 5.06087 12.5786 6.07828 11.8284 6.82843C11.0783 7.57857 10.0609 8 9 8C7.93913 8 6.92172 7.57857 6.17157 6.82843C5.42143 6.07828 5 5.06087 5 4ZM5 10C3.67392 10 2.40215 10.5268 1.46447 11.4645C0.526784 12.4021 0 13.6739 0 15C0 15.7956 0.316071 16.5587 0.87868 17.1213C1.44129 17.6839 2.20435 18 3 18H15C15.7956 18 16.5587 17.6839 17.1213 17.1213C17.6839 16.5587 18 15.7956 18 15C18 13.6739 17.4732 12.4021 16.5355 11.4645C15.5979 10.5268 14.3261 10 13 10H5Z" fill="black"/>
@@ -47,14 +58,14 @@ const SettingPopup = () => {
                                     )}
                                 >
                                     {/* children prop - displays dropdown content */}
-                                    <div className={styles.dropdownContent}>
+                                    <div className={styles.dropdownContent} tabIndex="-1">
                                         <Link href="./logIn"><span>Log In</span></Link>
                                         <Link href="./signUp"><span>Sign Up</span></Link>
                                     </div>
                             
                                 </SettingButton>
 
-                                <SettingButton02 
+                                <SettingButton02 tabIndex="0"
                                     icon={(
                                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
                                         <path d="M7.59704 14.7498L6.55823 13.7748C5.35226 12.6373 4.35525 11.6561 3.56719 10.8311C2.77913 10.0061 2.15226 9.26543 1.68659 8.60918C1.22092 7.95293 0.895548 7.3498 0.710473 6.7998C0.525399 6.2498 0.432861 5.6873 0.432861 5.1123C0.432861 3.9373 0.808981 2.95605 1.56122 2.16855C2.31346 1.38105 3.25077 0.987305 4.37316 0.987305C4.99406 0.987305 5.5851 1.1248 6.14629 1.3998C6.70749 1.6748 7.19107 2.0623 7.59704 2.5623C8.00301 2.0623 8.48659 1.6748 9.04779 1.3998C9.60898 1.1248 10.2 0.987305 10.8209 0.987305C11.9433 0.987305 12.8806 1.38105 13.6329 2.16855C14.3851 2.95605 14.7612 3.9373 14.7612 5.1123C14.7612 5.6873 14.6687 6.2498 14.4836 6.7998C14.2985 7.3498 13.9732 7.95293 13.5075 8.60918C13.0418 9.26543 12.415 10.0061 11.6269 10.8311C10.8388 11.6561 9.84182 12.6373 8.63585 13.7748L7.59704 14.7498Z" fill="#1C1B1F"/>
@@ -80,9 +91,9 @@ const SettingPopup = () => {
                                     </svg>
                                 )}
                                 >
-                                    <div className={styles.dropdownContent}>
-                                        <span>English {<RadioButton/>}</span>
-                                        <span>French {<RadioButton/>}</span>
+                                    <div className={styles.dropdownContent} tabIndex="-1">
+                                        <span tabIndex="0">English {<RadioButton tabIndex="0" />}</span>
+                                        <span tabIndex="0">French {<RadioButton tabIndex="0" />}</span>
                                     </div>
                                 </SettingButton>
 
@@ -100,10 +111,10 @@ const SettingPopup = () => {
                                     </svg>
                                 )}
                                 >
-                                    <div className={styles.dropdownContent}>
-                                        <span>Regular {<RadioButton/>}</span>
-                                        <span>Large {<RadioButton/>}</span>
-                                        <span>Larger {<RadioButton/>}</span>
+                                    <div className={styles.dropdownContent} tabIndex="-1">
+                                        <span tabIndex="0">Regular {<RadioButton tabIndex="0" />}</span>
+                                        <span tabIndex="0">Large {<RadioButton tabIndex="0" />}</span>
+                                        <span tabIndex="0">Larger {<RadioButton tabIndex="0" />}</span>
                                     </div>
                                 </SettingButton>
 
@@ -115,7 +126,7 @@ const SettingPopup = () => {
                                     </svg>
                                         )}
                                     title="Sound"
-                                    toggle = {<ToggleButton/>}
+                                    toggle = {<ToggleButton tabIndex="0"/>}
                                     />
 
                                 <SettingButton02
@@ -125,7 +136,7 @@ const SettingPopup = () => {
                                         </svg>
                                     )}
                                     title="Dark Mode"
-                                    toggle = {<ToggleButton />}
+                                    toggle = {<ToggleButton tabIndex="0"/>}
                                     >
                                 </SettingButton02>
 
