@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 7px 10px;
+    margin: 3px 10px;
 }
 .text p{
     font-size: var(--font-small-body);
@@ -27,4 +27,13 @@
 .saveIcon {
     width: 20px;
     height: 20px;
+}
+.title {
+    display: inline-block;
+    height: 24px;
+    padding: 3px 0;
+}
+.time {
+    display: block;
+    height: 12px;
 }

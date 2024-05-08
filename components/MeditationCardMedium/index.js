@@ -24,8 +24,8 @@ export default function MeditationCardMedium({
                 </div>
                 <div className={styles.titleContainer}>
                     <div className={styles.text}>
-                        <p>{title}</p>
-                        <p>{time}min</p>
+                        <p className={styles.title}>{title}</p>
+                        <p className={styles.time}>{time}min</p>
                     </div>
                     <div onClick = {(e) => { heartClickHandler(e)}} className={styles.saveIcon}>
                         <Image src={isSaved} alt='heart icon' width={22} height={20} />
