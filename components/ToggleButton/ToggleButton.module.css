@@ -37,7 +37,8 @@
 
   .textOn, .textOff {
     position: absolute;
-    top: 43%;
+    /* top: 42.5%; */
+    top: 12px;
     transform: translateY(-50%);
   }
   
@@ -47,7 +48,7 @@
   }
   
   .textOff {
-    left: 27px;
+    left: 26px;
     color: #000;
   }
 

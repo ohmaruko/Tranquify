@@ -27,9 +27,15 @@
     margin-top: 16px;
     font-family: var(--font-small-body);
   }
-  
 
-  
+  .dropdownContent {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 9px;
+  }
+
+
 
 
   

@@ -1,0 +1,43 @@
+.button {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+
+    justify-content: flex-start; 
+
+    gap: 10px;
+    align-items: center;
+    width: 268px;
+    height: 71px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: var(--light-gray);
+    border: none;
+    margin: 8px;
+    font-family: var(--font-button);
+}
+
+.button:hover {
+    background: #C2C2C2;
+}
+.iconAndTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 68%;
+}
+.icon {
+    padding: 30px;
+} 
+
+.title {
+    /* text-align: left; */
+    padding-left: 8px;
+
+    font-size: 13.5px;
+}
+
+.toggle {
+    position: relative;
+}

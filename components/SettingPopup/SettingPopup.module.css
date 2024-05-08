@@ -54,6 +54,13 @@
 }
 
 .moreSettings {
-  color: var(--black);
+  border-bottom: 2px solid black;
+}
+
+.dropdownContent {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 9px;
 }
 

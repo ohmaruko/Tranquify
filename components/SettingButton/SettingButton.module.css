@@ -1,7 +1,9 @@
 .button {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    /* justify-content: center; */
+    gap: 10px;
     align-items: center;
     width: 268px;
     height: 71px;
@@ -19,14 +21,18 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 60%;
+    /* justify-content: center; */
+    /* width: 70%; */
 }
 .icon {
-    padding: 13px;
+    /* padding: 13px; */
+    padding-right: 21px;
+    padding-left: 14px;
 } 
 
 .title {
     text-align: left;
+    padding-left: 20px;
 }
 
 .toggle {
@@ -50,7 +56,7 @@
     /* left: 18.5%; */
     z-index: 100; 
     width: 265px;
-    margin-top: -1.8%;
+    margin-top: -1%;
     margin-left: 8.6px;
     font-family: var(--font-button);
 }
@@ -59,6 +65,7 @@
     display: block; 
 }
 
-.dropdownContent p {
+
+.dropdownContent span {
     margin-left: 5%;
 }
