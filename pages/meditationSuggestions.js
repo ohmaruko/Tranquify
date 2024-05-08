@@ -14,7 +14,7 @@ export default function MeditationSuggestions() {
         <div className={styles.container}>
             <SearchBar />
             <div className={styles.categoryTitle}>
-                <Image src='./Images/suggestion.svg' alt='Suggestions' width={24} height={24} />
+                <Image src='./images/suggestion.svg' alt='Suggestions' width={24} height={24} />
                 <h2>Suggestions For You</h2>
             </div>
             <div className={styles.meditationCardsOuterContainer}>

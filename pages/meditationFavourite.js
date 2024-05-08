@@ -19,7 +19,7 @@ export default function MeditationFavourite() {
         <div className={styles.container}>
             <SearchBar />
             <div className={styles.categoryTitle}>
-                <Image src='./Images/favorite.svg' alt='Favorite' width={24} height={24} />
+                <Image src='./images/favorite.svg' alt='Favorite' width={24} height={24} />
                 <h2>Favorite</h2>
             </div>
             <div className={styles.meditationCardsOuterContainer}>
