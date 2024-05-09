@@ -1,6 +1,7 @@
 .searchContainer {
     display: flex;
     justify-content: center;
+
 }
 .inputBox {
     width: 330px;
@@ -11,6 +12,7 @@
     background-position: 10px 13px; 
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
+    font-family: 'DM Sans';
 }
 .inputBox:focus {
     border: 1px solid var(--light-green);
