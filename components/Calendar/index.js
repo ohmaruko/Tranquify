@@ -27,7 +27,10 @@ border: none !important;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
+.react-calendar__month-view__days__day {
+  font-family: DM Sans;
 }
 
 .react-calendar__tile--now:hover,
@@ -75,8 +78,6 @@ background: transparent !important;
 .react-calendar__navigation__next2-button {
   display: none;
 }
-
-
 
 
 
