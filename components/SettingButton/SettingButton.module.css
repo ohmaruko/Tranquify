@@ -17,6 +17,10 @@
 .button:hover {
     background: #C2C2C2;
 }
+.button:active:focus {
+    background-color: var(--light-green);
+}
+
 .iconAndTitle {
     display: flex;
     flex-direction: row;
@@ -68,4 +72,11 @@
 
 .dropdownContent span {
     margin-left: 5%;
+}
+
+.activeButton {
+    background-color: var(--light-green);
+}
+.activeButton:hover {
+    background-color: var(--light-green);
 }
