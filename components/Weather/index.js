@@ -9,7 +9,7 @@ export default function Weather({ setLoaded }) {
         const [currentDate, setCurrentDate] = useState('');
         const [loading, setLoading] = useState(true);
         const [icon, setIcon] = useState(null); 
-        const memoizedWeatherData = useMemo(() => weatherData, [weatherData]);
+        const memorizedWeatherData = useMemo(() => weatherData, [weatherData]);
 
         useEffect(() => {
             const date = new Date();
