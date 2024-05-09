@@ -1,12 +1,19 @@
 import Image from "next/image";
 import styles from "@/styles/About.module.css";
 import Chart from "@/components/Chart";
-import TopBar from "@/components/TopBar";
+import { useRouter } from 'next/router';
 
 export default function About() {
+  const router = useRouter();
+  const handleBack = () => {
+      router.back();
+  };
   return (
     <>
       <main className={styles.main}>
+        <div onClick={handleBack}>
+          <Image src='/images/back-button.svg' width={21} height={19} className={styles.closeButton}/>
+        </div>
         <div className={styles.container}>
           <h1 className={styles.homeTitle}>About Us</h1>
           <div className={styles.mascotContainer}>
