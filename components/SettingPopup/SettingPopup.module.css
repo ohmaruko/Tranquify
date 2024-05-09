@@ -64,3 +64,11 @@
   gap: 9px;
 }
 
+.settingOptions {
+  width: 265px;
+  position: relative;
+  right: 10px;
+  height:0.5px;
+  border-width:0;
+  background-color: var(--light-gray);
+}

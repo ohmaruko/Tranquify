@@ -8,6 +8,7 @@ import RadioButton from "../RadioButton";
 
 const SettingPopup = () => {
     const [isOpen, setIsOpen] = useState(true);
+    const [moreSettingsClicked, setMoreSettingsClicked] = useState(false);
 
     const handleClosePopup = () => {
         setIsOpen(false);
@@ -22,6 +23,11 @@ const SettingPopup = () => {
           isSetOpen;
         }
       };
+
+    const handleMoreSettingsClick = () => {
+        setMoreSettingsClicked(true);
+        setIsOpen(false);
+    };
 
     return (
         <>
@@ -59,8 +65,9 @@ const SettingPopup = () => {
                                 >
                                     {/* children prop - displays dropdown content */}
                                     <div className={styles.dropdownContent} tabIndex="-1">
-                                        <Link href="./logIn"><span>Log In</span></Link>
-                                        <Link href="./signUp"><span>Sign Up</span></Link>
+                                        <Link href="./logIn"  onClick={handleMoreSettingsClick}><span>Log In</span></Link>
+                                        <hr className={styles.settingOptions}></hr>
+                                        <Link href="./signUp"  onClick={handleMoreSettingsClick}><span>Sign Up</span></Link>
                                     </div>
                             
                                 </SettingButton>
@@ -93,6 +100,7 @@ const SettingPopup = () => {
                                 >
                                     <div className={styles.dropdownContent} tabIndex="-1">
                                         <span tabIndex="0">English {<RadioButton tabIndex="0" />}</span>
+                                        <hr className={styles.settingOptions}></hr>
                                         <span tabIndex="0">French {<RadioButton tabIndex="0" />}</span>
                                     </div>
                                 </SettingButton>
@@ -113,7 +121,9 @@ const SettingPopup = () => {
                                 >
                                     <div className={styles.dropdownContent} tabIndex="-1">
                                         <span tabIndex="0">Regular {<RadioButton tabIndex="0" />}</span>
+                                        <hr className={styles.settingOptions}></hr>
                                         <span tabIndex="0">Large {<RadioButton tabIndex="0" />}</span>
+                                        <hr className={styles.settingOptions}></hr>
                                         <span tabIndex="0">Larger {<RadioButton tabIndex="0" />}</span>
                                     </div>
                                 </SettingButton>
@@ -141,7 +151,7 @@ const SettingPopup = () => {
                                 </SettingButton02>
 
                                 <h5>Go to&nbsp;
-                                    <span><Link href="/setting" className={styles.moreSettings}>More Settings...</Link></span>
+                                    <span><Link href="/setting" className={styles.moreSettings} onClick={handleMoreSettingsClick}>More Settings...</Link></span>
                                 </h5>
                             </div>
 
