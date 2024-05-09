@@ -3,11 +3,11 @@ import Link from 'next/link';
 import Image from "next/image";
 
 export default function MeditationCardHome({
-    link, title
+    link, title, meditation
 }) {
     return(
         <div className={styles.cardContainer}>
-            <Link href="" style={{textDecoration: 'none', color: 'black'}}>
+            <Link href={ "./meditationPlayer?media=" + meditation} style={{textDecoration: 'none', color: 'black'}}>
                 <div className={styles.card}>
                     <div className={styles.graphicContainer}>
                         <Image src={link} width="134" height="127" className={styles.graphic}/>

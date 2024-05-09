@@ -40,7 +40,7 @@ export default function MeditationMenu() {
                 <div className={styles.categoryContainer}>
                     <p>Meditation Category</p>
                     <div className={styles.categoryCards}>
-                        <CategoryCard category="Mood and Goal" link="/meditaionMoodAndGoal" graphic="/images/great-icon.svg" top="30px" left="-20px"/>
+                        <CategoryCard category="Mood and Goal" link="/meditationMoodAndGoal" graphic="/images/great-icon.svg" top="30px" left="-20px"/>
                         <CategoryCard category="Time" link="/meditationTime" graphic="/images/terrible-icon.svg"  top="-60px" left="60px"/>
                         <CategoryCard category="Music" link="/meditationMusic" graphic="/images/bad-icon.svg"  top="50px" left="60px"/>
                     </div>
