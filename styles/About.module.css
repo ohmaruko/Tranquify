@@ -3,6 +3,11 @@
     flex-direction: column;
     justify-content: space-between;
   }
+
+  .closeButton {
+    margin-left: 45px;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
