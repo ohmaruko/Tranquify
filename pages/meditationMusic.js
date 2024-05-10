@@ -1,12 +1,18 @@
 import styles from '../styles/MeditationMusic.module.css';
-import TopBar from '@/components/TopBar';
 import SearchBar from '@/components/SearchBar';
 import MeditationCardSmall from '@/components/MeditationCardSmall';
 import { meditationData } from '@/data/meditation';
 import Navigation from '@/components/Navigation';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 export default function MeditationMoodAndGoal() {
+     // back button
+     const router = useRouter();
+     const handleBack = () => {
+         router.back();
+     };
     // default menu
     let natureCategoryId = [];
     meditationData && meditationData.meditations.map((item, index)=> {
@@ -38,6 +44,9 @@ export default function MeditationMoodAndGoal() {
     return(
         <>
         <div className={styles.container}>
+            <div onClick={handleBack}>
+                <Image src='/images/back-button.svg' width={21} height={19} className={styles.backButton}/>
+            </div>
             <SearchBar />
             <div className={styles.categoryTitle}>
                 <h2>Music</h2>

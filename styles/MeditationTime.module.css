@@ -1,3 +1,6 @@
+.backButton {
+    margin: -80px 0 10px 45px;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -35,6 +38,7 @@
     border: none;
     color: var(--white);
     font-size: var(--font-body);
+    font-family: 'DM Sans';
 }
 .meditationCardsOuterContainer {
     overflow-y: auto;
