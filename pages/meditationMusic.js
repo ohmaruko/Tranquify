@@ -24,7 +24,7 @@ export default function MeditationMoodAndGoal() {
     const [dataId, setDataId] = useState(natureCategoryId);
 
     // filtering function for tab menu
-    const menus = ["Classic", "Nature", "Mantra"];
+    const menus = ["Classic", "Nature", "Sound Healing"];
     function handleMenu(category) {
         let filteredMeditationId = [];
         meditationData && meditationData.meditations.map((item, index) => {

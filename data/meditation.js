@@ -70,6 +70,16 @@ export const meditationData = {
             thumbnail: "/images/thumbnails/sleep_oasis.png",
             description: "Find solace in a peaceful haven of restful calmness. Let go of the day's burdens and find rejuvenation in the tranquility of your own Sleep Oasis."
         },
+        {
+            title: "Meditation for Growth",
+            duration: 10,
+            moodType: ["growth"],
+            misicType: [],
+            isSaved: false,
+            source: "BCmTP6lcYgA",
+            thumbnail: "/images/thumbnails/sleep_oasis.png",
+            description: ""
+        },
         // Music
         {
             title: "Forest",
@@ -121,5 +131,48 @@ export const meditationData = {
             thumbnail: "/images/thumbnails/birds.png",
             description: "Discover a tapestry of chirping melodies and rustling leaves, a symphony of nature's tranquility."
         },
+        //classical
+        {
+            title: "Beethoven",
+            duration: 20,
+            moodType: [""],
+            misicType: ["classic"],
+            isSaved: false,
+            source: "vS3LLR8sD58",
+            thumbnail: "/images/thumbnails/beethoven.png",
+            description: ""
+        },
+        {
+            title: "Relaxing Classical Music",
+            duration: 20,
+            moodType: ["sleep"],
+            misicType: ["classic"],
+            isSaved: false,
+            source: "AlZi6LYfAs0",
+            thumbnail: "/images/thumbnails/relaxing_classical_music.png",
+            description: ""
+        },
+        //matra
+        {
+            title: "Relaxing Sound Healing",
+            duration: 10,
+            moodType: ["sleep"],
+            misicType: ["sound healing"],
+            isSaved: false,
+            source: "unCya_-8ECs",
+            thumbnail: "/images/thumbnails/relaxing_sound_healing.png",
+            description: ""
+        },
+        {
+            title: "Sound Bath",
+            duration: 20,
+            moodType: ["sleep"],
+            misicType: ["sound healing"],
+            isSaved: false,
+            source: "vvX-UVGaJ_0",
+            thumbnail: "/images/thumbnails/sound_bath.png",
+            description: ""
+        },
+
     ]
 }
