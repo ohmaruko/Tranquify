@@ -1,3 +1,7 @@
+.closeButton {
+    margin-left: 40px;
+  }
+  
 .recordTitle {
     font-size: var(--font-subheading);
     color: var(--dark-green);

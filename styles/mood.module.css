@@ -1,3 +1,7 @@
+.closeButton {
+    margin-left: 40px;
+  }
+  
 .moodContainer {
     display: flex;
     flex-direction: column;
