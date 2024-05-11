@@ -31,7 +31,7 @@ export default function SearchBar() {
           <div className={styles.searchResult}>
             <div className={styles.heading}>
               <h2>Search Results</h2>
-              <Image src='/images/closeButton.svg' alt="Close Button" width={32} height={32} 
+              <Image src='/images/closeButton.svg' alt="Close Button" width={20} height={20} 
                 onClick={() => setIsOpen(false)}
               />
             </div>

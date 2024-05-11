@@ -40,13 +40,14 @@
 }
 .meditationCardsOuterContainer {
     overflow-y: auto;
-    min-height: 490px;
-    max-height: 490px;
+    min-height: 491.8px;
+    max-height: 491.8px;
 }
 .meditationCardsInnerContainer {
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 1rem;
     margin: 1rem 3.5rem;
 }
