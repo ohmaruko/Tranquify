@@ -29,8 +29,9 @@
     height: 20px;
 }
 .title {
-    display: inline-block;
-    height: 24px;
+    display: flex;
+    align-items: center;
+    height: 30px;
     padding-bottom: 3px;
 }
 .time {

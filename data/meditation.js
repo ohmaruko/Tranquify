@@ -41,13 +41,13 @@ export const meditationData = {
             description: "Experience a calming oasis with \"Meditation For Anger.\" Relax into stillness as soothing visuals and gentle guidance lead you to a tranquil state, easing tension and fostering inner peace."
         },
         {
-            title: "Manage Negative Thoughts",
+            title: "Overcoming Negativity",
             duration: 5,
             moodType: ["anger", "stress"],
             misicType: [],
             isSaved: false,
             source: "5qM-NBgBTSo",
-            thumbnail: "/images/thumbnails/manage_negative_thoughts.png",
+            thumbnail: "/images/thumbnails/overcoming_negativity.png",
             description: "Flow through negativity with 'Leaves on a Stream' meditation. Let thoughts drift by, fostering mental clarity. Harness peace amid the current of consciousness, enhancing well-being and resilience."
         },
         {
@@ -213,7 +213,7 @@ export const meditationData = {
             description: "Relax and unwind with serene classical melodies by Bach, Mozart, Debussy, and more. Let the tranquil harmonies guide you to a state of inner calm and tranquility in this meditation session."
         },
         {
-            title: "Relaxing Classical Music By Mozart",
+            title: "Relaxing Music By Mozart",
             duration: 20,
             moodType: ["sleep"],
             misicType: ["classic"],
