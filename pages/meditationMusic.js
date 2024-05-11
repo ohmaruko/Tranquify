@@ -59,7 +59,7 @@ export default function MeditationMoodAndGoal() {
                                 <button 
                                     onClick={() => {handleMenu(e); changeColor(e)}}
                                     className={styles.tabButton}
-                                    style = {{ backgroundColor: selectedButton === e ? "var(--normal-green)": "var(--light-gray",}}
+                                    style = {{ backgroundColor: selectedButton === e ? "var(--normal-green)": "var(--light-gray", lineHeight: "80%"}}
                                     >{e}
                                 </button>
                             )

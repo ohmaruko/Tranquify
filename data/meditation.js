@@ -31,6 +31,66 @@ export const meditationData = {
             description: "This meditation helps ease anxiety and fosters inner peace through gentle guidance, deep breathing, and visualization. It encourages mindfulness and self-care, empowering individuals to navigate life with greater ease."
         },
         {
+            title: "Meditation For Anger",
+            duration: 10,
+            moodType: ["anger"],
+            misicType: [],
+            isSaved: false,
+            source: "wkse4PPxkk4",
+            thumbnail: "/images/thumbnails/meditation_for_anger.png",
+            description: "Experience a calming oasis with \"Meditation For Anger.\" Relax into stillness as soothing visuals and gentle guidance lead you to a tranquil state, easing tension and fostering inner peace."
+        },
+        {
+            title: "Manage Negative Thoughts",
+            duration: 5,
+            moodType: ["anger", "stress"],
+            misicType: [],
+            isSaved: false,
+            source: "5qM-NBgBTSo",
+            thumbnail: "/images/thumbnails/manage_negative_thoughts.png",
+            description: "Flow through negativity with 'Leaves on a Stream' meditation. Let thoughts drift by, fostering mental clarity. Harness peace amid the current of consciousness, enhancing well-being and resilience."
+        },
+        {
+            title: "Meditation For Depression",
+            duration: 10,
+            moodType: ["sadness"],
+            misicType: [],
+            isSaved: false,
+            source: "xRxT9cOKiM8",
+            thumbnail: "/images/thumbnails/meditation_for_depression.png",
+            description: "Cultivate inner calm and mental clarity with guided meditation practices tailored to alleviate symptoms of depression. Find solace and stability in moments of mindfulness to ease the burden of emotional distress."
+        },
+        {
+            title: "The Sunrise",
+            duration: 3,
+            moodType: ["sadness"],
+            misicType: [],
+            isSaved: false,
+            source: "uWEvseYTpVs",
+            thumbnail: "/images/thumbnails/the_sunrise.png",
+            description: "Experience 'The Sunrise,' a therapeutic meditation integrating visualization. This calming practice, featured in depression treatment, encourages a mindful embrace of dawn's serenity, fostering a state of flow for inner peace and resilience."
+        },
+        {
+            title: "Meditation For Self Love",
+            duration: 15,
+            moodType: ["growth", "sadness"],
+            misicType: [],
+            isSaved: false,
+            source: "itZMM5gCboo",
+            thumbnail: "/images/thumbnails/meditation_for_self_love.png",
+            description: "Connect deeply with yourself, fostering a compassionate relationship through gentle reflection and mindfulness practices."
+        },
+        {
+            title: "Quick Body Scan",
+            duration: 5,
+            moodType: ["sadness"],
+            misicType: [],
+            isSaved: false,
+            source: "CeT_ZAp6juw",
+            thumbnail: "/images/thumbnails/quick_body_scan.png",
+            description: "Learn to alleviate depression through meditation. Try a simple body scan for beginners to find peace and clarity. Join Flow for accessible practices promoting mental wellness."
+        },
+        {
             title: "Breathing Meditation",
             duration: 10,
             moodType: ["stress"],
@@ -77,8 +137,18 @@ export const meditationData = {
             misicType: [],
             isSaved: false,
             source: "BCmTP6lcYgA",
-            thumbnail: "/images/thumbnails/sleep_oasis.png",
-            description: ""
+            thumbnail: "/images/thumbnails/meditation_for_growth.png",
+            description: "Journey inward to nurture personal growth and inner harmony. This guided meditation gently leads through peaceful landscapes, fostering self-awareness and expansion. Find stillness within to blossom into your fullest self."
+        },
+        {
+            title: "Positive Affirmation",
+            duration: 10,
+            moodType: ["growth"],
+            misicType: [],
+            isSaved: true,
+            source: "-aBP53BcSj8",
+            thumbnail: "/images/thumbnails/positive_affirmation.png",
+            description: "Connect with inner peace through soothing visuals and gentle guidance. Reaffirm positivity within yourself as tranquil scenes and affirmations create a serene atmosphere for relaxation and self-reflection."
         },
         // Music
         {
@@ -133,26 +203,26 @@ export const meditationData = {
         },
         //classical
         {
-            title: "Beethoven",
+            title: "Peaceful Classical Music",
             duration: 20,
             moodType: [""],
             misicType: ["classic"],
             isSaved: false,
-            source: "vS3LLR8sD58",
+            source: "lA7TTnZhjdY",
             thumbnail: "/images/thumbnails/beethoven.png",
-            description: ""
+            description: "Relax and unwind with serene classical melodies by Bach, Mozart, Debussy, and more. Let the tranquil harmonies guide you to a state of inner calm and tranquility in this meditation session."
         },
         {
-            title: "Relaxing Classical Music",
+            title: "Relaxing Classical Music By Mozart",
             duration: 20,
             moodType: ["sleep"],
             misicType: ["classic"],
             isSaved: false,
-            source: "AlZi6LYfAs0",
+            source: "QHl6wYCwlcQ",
             thumbnail: "/images/thumbnails/relaxing_classical_music.png",
-            description: ""
+            description: "Experience unparalleled relaxation with Mozart's timeless classical melodies. Let soothing tunes guide your meditation, enhancing focus and tranquility. Perfect for unwinding and centering your mind amidst the chaos of daily life."
         },
-        //matra
+        //sound healing
         {
             title: "Relaxing Sound Healing",
             duration: 10,
@@ -161,7 +231,7 @@ export const meditationData = {
             isSaved: false,
             source: "unCya_-8ECs",
             thumbnail: "/images/thumbnails/relaxing_sound_healing.png",
-            description: ""
+            description: "Experience the serenity of a Crystal Singing Bowl Meditation. Let the soothing tones wash over you, offering relaxation and relief from stress. Tune into the healing power of sound for a tranquil mind and body."
         },
         {
             title: "Sound Bath",
@@ -171,7 +241,7 @@ export const meditationData = {
             isSaved: false,
             source: "vvX-UVGaJ_0",
             thumbnail: "/images/thumbnails/sound_bath.png",
-            description: ""
+            description: "Find tranquility with our Sound Bath Guided Meditation, offering soothing tones for deep relaxation and sound healing. Tune in to the serene melodies, fostering inner calm and rejuvenation."
         },
 
     ]
