@@ -1,39 +1,48 @@
 .popupWrapper {
-    display: flex;
-    justify-content: center;
-    width: 430px;
-    height: 932px;
-    margin: 0 auto; 
-  }
-  .popupWrapper a {
-    text-decoration: none;
-    color: var(--black);
-  }
+  display: flex;
+  justify-content: center;
+  width: 430px;
+  height: 932px;
+  margin: 0 auto; 
+}
+.popupWrapper a {
+  text-decoration: none;
+  color: var(--black);
+}
   
-  .closeButton {
-    margin-left: 20px;
-  }
+.closeButton {
+  margin-left: 20px;
+}
   
-  .moreSettings {
-    font-size: var(--font-subheading);
-    margin: 0 121px;
-  }
+.moreSettings {
+  font-size: var(--font-subheading);
+  margin: 0 121px;
+}
   
-  .buttonContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 16px;
-    font-family: var(--font-small-body);
-  }
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  font-family: var(--font-small-body);
+}
 
-  .dropdownContent {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 9px;
-  }
+.dropdownContent {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 9px;
+}
+
+.settingOptions {
+  width: 265px;
+  position: relative;
+  right: 10px;
+  height:0.5px;
+  border-width:0;
+  background-color: var(--light-gray);
+}
 
 
 
