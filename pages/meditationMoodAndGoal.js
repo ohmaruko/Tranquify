@@ -73,9 +73,9 @@ export default function MeditationMoodAndGoal() {
                     {
                         dataId.map( id => {
                             let meditationContent = meditationData.meditations[id];
-                            console.log(meditationContent.title);
+                            console.log(meditationContent.isSaved);
                             return(
-                                <MeditationCardSmall meditation={id} title={meditationContent.title} time={meditationContent.duration} thumbnail={meditationContent.thumbnail} />
+                                <MeditationCardSmall meditation={id} title={meditationContent.title} time={meditationContent.duration} thumbnail={meditationContent.thumbnail} favourite={meditationContent.isSaved}/>
                             )
                         })
                     }

@@ -17,9 +17,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
     margin: 6px 10px;
 }
 .text p{
+    display: flex;
+    align-items: center;
     font-size: var(--font-small-body);
     margin: 0;
     max-width: 90px;

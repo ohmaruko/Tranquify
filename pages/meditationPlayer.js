@@ -6,11 +6,12 @@ import { useRouter } from "next/router";
 import { meditationData } from "@/data/meditation";
 import YouTube from 'react-youtube';
 import Image from 'next/image';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function MeditationPlayer() {
     const router = useRouter();
     const meditationContentId = Number(router.query.media);
+    const isSavedMeditation = router.query.isSaved;
     const data = meditationData.meditations[meditationContentId];
     if (!data || !data.source) {
         return <div>Loading...</div>;
@@ -26,9 +27,12 @@ export default function MeditationPlayer() {
     };
 
     //save button
-    const [isSaved, setIsSaved] = useState("./images/unsaved-icon-green.svg");
+    const [heartIcon, setHeartIcon] = useState();
+    useEffect(() => {
+        setHeartIcon(isSavedMeditation == "true" ? './images/saved-icon-green.svg' : './images/unsaved-icon-green.svg');
+    }, [isSavedMeditation]);
     function heartClickHandler(e) {
-        isSaved === './images/unsaved-icon-green.svg' ? setIsSaved('./images/saved-icon-green.svg') : setIsSaved('./images/unsaved-icon-green.svg');
+        heartIcon === './images/unsaved-icon-green.svg' ? setHeartIcon('./images/saved-icon-green.svg') : setHeartIcon('./images/unsaved-icon-green.svg');
         // e.stopPropagation();
         e.preventDefault();
     }
@@ -48,7 +52,7 @@ export default function MeditationPlayer() {
                             <div className={styles.titleContainer}>
                                 <h2 className={styles.title}>{data.title}</h2>
                                 <div onClick = {(e) => { heartClickHandler(e)}} className={styles.saveIcon}>
-                                    <Image src={isSaved} alt='heart icon' width={22} height={20} />
+                                    <Image src={heartIcon} alt='heart icon' width={22} height={20} />
                                 </div>
                             </div>
                             <p>{data.duration}min</p>

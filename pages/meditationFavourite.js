@@ -36,7 +36,7 @@ export default function MeditationFavourite() {
                 {
                     savedContents.map((item, index) => {
                         return(
-                            <MeditationCardSmall meditation={index} title={item.title} time={item.duration} thumbnail={item.thumbnail} />
+                            <MeditationCardSmall meditation={index} title={item.title} time={item.duration} thumbnail={item.thumbnail} favourite={item.isSaved}/>
                         )
                     })
                 }

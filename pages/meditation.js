@@ -28,13 +28,10 @@ export default function MeditationMenu() {
                     {
                         data.map((item, index) => {
                             return(
-                                <MeditationCardMedium meditation={index} title={item.title} time={item.duration} thumbnail={item.thumbnail} />
+                                <MeditationCardMedium meditation={index} title={item.title} time={item.duration} thumbnail={item.thumbnail} favourite={item.isSaved}/>
                             )
                         })
                     }
-                        {/* <MeditationCardMedium meditation="0" title={data[0].title} time={data[0].duration} thumbnail={data[0].thumbnail} />
-                        <MeditationCardMedium meditation="1" title={data[1].title} time={data[1].duration} thumbnail={data[1].thumbnail} />
-                        <MeditationCardMedium meditation="2" title={data[2].title} time={data[2].duration} thumbnail={data[2].thumbnail} /> */}
                     </div>
                 </div>
                 <div className={styles.categoryContainer}>

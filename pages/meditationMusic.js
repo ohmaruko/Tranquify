@@ -74,7 +74,7 @@ export default function MeditationMoodAndGoal() {
                             let meditationContent = meditationData.meditations[id];
                             console.log(meditationContent.title);
                             return(
-                                <MeditationCardSmall meditation={id} title={meditationContent.title} time={meditationContent.duration} thumbnail={meditationContent.thumbnail} />
+                                <MeditationCardSmall meditation={id} title={meditationContent.title} time={meditationContent.duration} thumbnail={meditationContent.thumbnail} favourite={meditationContent.isSaved}/>
                             )
                         })
                     }
