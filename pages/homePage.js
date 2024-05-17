@@ -67,12 +67,8 @@ export default function HomePage() {
                             <div className={styles.logo}>
                                 <div ref={loading} />
                             </div>
-                            <h1 className={styles.text}>Loading</h1>
-                            <div className={styles.dotContainer}>
-                                <div className={styles.dot}></div>
-                                <div className={styles.dot}></div>
-                                <div className={styles.dot}></div>
-                            </div>
+                            <h1 className={styles.text}>Loading...</h1>
+                            
                         </div>
                     ) : (
                         <div className={styles.homePageContent}>
@@ -99,8 +95,10 @@ export default function HomePage() {
                                     <div className={styles.meditationCards}>
                                         <MeditationCardHome title={data[0].title} link={data[0].thumbnail} meditation={0}/>
                                         <MeditationCardHome title={data[2].title} link={data[2].thumbnail} meditation={2}/>
-                                        <MeditationCardHome title={data[7].title} link={data[7].thumbnail} meditation={7}/>
-                                        <MeditationCardHome title={data[1].title} link={data[1].thumbnail} meditation={1}/>
+                                        <MeditationCardHome title={data[6].title} link={data[6].thumbnail} meditation={6}/>
+                                        <div className={styles.meditationLastCard}>
+                                            <MeditationCardHome title={data[1].title} link={data[1].thumbnail} meditation={1}/>
+                                        </div>
                                         {/* <MeditationCardHome link="/images/thumbnails/2.png" title="Meditation"/>
                                         <MeditationCardHome link="/images/thumbnails/3.png" title="Meditation"/>
                                         <MeditationCardHome link="/images/thumbnails/4.png" title="Meditation"/> */}

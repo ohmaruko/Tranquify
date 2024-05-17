@@ -154,6 +154,10 @@
     display: none;
   }
 
+.meditationLastCard {
+    margin-right: 2rem;
+}
+
 .graphic {
     width: 134px;
     height: 127px;
