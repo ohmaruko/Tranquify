@@ -32,3 +32,30 @@
 .textContainer p {
     font-size: var(--font-small-body);
 }
+/* button */
+.button {
+    width: 280px;
+    height: 64px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--light-green);
+    font-size: var(--font-button);
+    font-weight: bold;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif; 
+}
+
+.button:hover {
+    background-color: var(--normal-green);
+    color: var(--white);
+}
+
+.button:active {
+    background-color: var(--dark-green);
+    color: var(--white);
+}
+
+.buttonText {
+    text-decoration: none;
+    color: var(--black);
+}

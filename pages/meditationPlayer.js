@@ -1,7 +1,5 @@
 import Head from "next/head";
 import styles from "@/styles/MeditationPlayer.module.css";
-import TopBar from "@/components/TopBar";
-import GreenButton from "@/components/GreenButton";
 import { useRouter } from "next/router";
 import { meditationData } from "@/data/meditation";
 import YouTube from 'react-youtube';
@@ -36,6 +34,12 @@ export default function MeditationPlayer() {
         // e.stopPropagation();
         e.preventDefault();
     }
+    // green button
+    const handleKeyDown = (event) => {
+        if(event.key === 'Enter'){
+            window.location.href = greenButtonLink;
+        }
+    }
     return (
         <>
             <Head>
@@ -59,8 +63,10 @@ export default function MeditationPlayer() {
                             <p>{data.description}</p>
                         </div>
                     </div>
-                    <div className={styles.button} onClick={() => router.back()}>
-                        <GreenButton greenButtonText="Finish Meditation" greenButtonLink="#" />
+                     <div onClick={() => router.back()} className={styles.buttonText} onKeyDown={handleKeyDown} >
+                        <button className={styles.button}>
+                            Finish Meditation
+                        </button>
                     </div>
                 </div>
             </main>

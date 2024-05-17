@@ -35,8 +35,7 @@
 }
 .meditationCards::-webkit-scrollbar {
     display: none;
-  }
-
+}
 .categoryContainer {
     margin: 0 23px;
 }

@@ -33,6 +33,7 @@
     height: 52px;
     background: url(/images/stress-icon.svg);
     cursor: pointer;
+    border:none;
   }
   .stressLevelLabels {
     display: flex;

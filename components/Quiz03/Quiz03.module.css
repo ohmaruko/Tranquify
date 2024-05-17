@@ -31,8 +31,9 @@
   .slider::-moz-range-thumb {
     width: 52px;
     height: 52px;
-    background: url(/images/.sleep-icon.svg);
+    background: url(/images/sleep-icon.svg);
     cursor: pointer;
+    border:none;
   }
   .sleepLevelLabels {
     display: flex;
